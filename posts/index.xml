@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Tanmay Bhat</title>
+    <link>https://tanmay-bhat.github.io/posts/</link>
+    <description>Recent content in Posts on Tanmay Bhat</description>
+    <image>
+      <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 11 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to ArgoCD : apps of apps</title>
+      <link>https://tanmay-bhat.github.io/posts/2022-01-11-introduction-to-argocd-apps-of-apps/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2022-01-11-introduction-to-argocd-apps-of-apps/</guid>
+      <description>What&amp;rsquo;s Apps of Apps or Cluster bootstrapping ?  The App of Apps Pattern helps us define a root Application. So, rather than point to an application manifest fort every application creation, the Root App points to a folder which contains the Application YAML definition for each child App. Each child app’s Application YAML then points to a directory containing the actual application manifests be it in manifest file, Helm or Kustomize.</description>
+    </item>
+    
+    <item>
+      <title>How to scale down Kubernetes cluster workloads during off hours</title>
+      <link>https://tanmay-bhat.github.io/posts/how-to-scale-down-kubernetes-cluster-workloads-during-off-hours/</link>
+      <pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/how-to-scale-down-kubernetes-cluster-workloads-during-off-hours/</guid>
+      <description>You heard it right, everyone needs to rest once a while, even our little Kubernetes cluster. Before we begin, here are the prerequisites :
+ Kubernetes cluster Cluster autoscaler Bit of patience  Usecase :  One of the most important aspect when it comes to running workload in cloud is to keep cost under control or tune it such that you can save extra. You maybe hosting workload in Kubernetes where you wont get traffic post business hours.</description>
+    </item>
+    
+    <item>
+      <title>Using Single Load Balancer across multiple namespaces in Kubernetes</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-12-19-using-single-load-balancer-across-multiple-namespaces-in-kubernetes/</link>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-12-19-using-single-load-balancer-across-multiple-namespaces-in-kubernetes/</guid>
+      <description>One Loadbalancer to rule them all ? you heard it true, Its achievable !
+For AWS LoadBalancer Controller Until couple weeks ago, we were creating a loadbalancer for each namespace ( by default from AWS), which was a waste of resources and money. Hence we thought how can we use a **single loadbalancer ** across all the namespaces.
+Here&amp;rsquo;s an example of before migration, how ingress looked like for default namespace:</description>
+    </item>
+    
+    <item>
+      <title>Hosting the Chartmuseum in DigitalOcean Spaces</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-12-12-hosting-the-chartmuseum-in-digital-ocean-space/</link>
+      <pubDate>Sun, 12 Dec 2021 21:26:48 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-12-12-hosting-the-chartmuseum-in-digital-ocean-space/</guid>
+      <description>Most DevOps engineers who use Chartmuseum to store/host their helm charts use S3 as their storage medium. Well, I wanted to try Digital Ocean spaces as its S3 compatible storage option.
+Well, there&amp;rsquo;s an obvious reason why to use S3 in the first place. Beautiful integration with AWS other services, cheap, easy to access, versioning, MFA delete protection etc.
+However, if you&amp;rsquo;re an early developer / DevOps engineer or in a small startup who doesn&amp;rsquo;t wanna go through 1000 configurations in AWS just to create one single storage bucket in the cloud and again go through 1000 more security hurdles in case you want this bucket to be public, you should use DO Spaces.</description>
+    </item>
+    
+    <item>
+      <title>Using Kaniko to build and push images to Gitlab-CI to ECR</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-12-12-using-kaniko-to-build-and-push-images-through-gitlab-ci-to-ecr/</link>
+      <pubDate>Sun, 12 Dec 2021 12:28:22 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-12-12-using-kaniko-to-build-and-push-images-through-gitlab-ci-to-ecr/</guid>
+      <description>Introduction Though this seems like an easy straight forward task by referring to the docs, it&amp;rsquo;s not trust me!
+Until today in my Gitlab CI, I used to use aws-cli image and later install amazon-linux extras install docker and then use DIND service to build docker images through Gitlab-CI. that will change from today. I learned about the tool called Kaniko from Google which is built to simplify the docker build process without using Docker daemon hence not giving root-level privileges to the runner hence security says top-notch during the build process.</description>
+    </item>
+    
+    <item>
+      <title>A tale of EC2 connectivity issue</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-12-11-a-tale-of-ec2-connectivity-issue/</link>
+      <pubDate>Sat, 11 Dec 2021 17:58:40 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-12-11-a-tale-of-ec2-connectivity-issue/</guid>
+      <description>This happened 3 days ago. I received a message from one of our ML engineers that he can&amp;rsquo;t access the EC2 server in the us-east-1 region. I asked him about the error message and he said ssh is giving a time-out error.
+So, I tried connecting to the server via EC2 connect feature (web shell) that AWS provides, and even that said connection timed out.
+Tried telnet to the endpoint and was the same also.</description>
+    </item>
+    
+    <item>
+      <title>Journey to the Kubernetes world with Digital Ocean</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-12-11-journey-to-the-kubernetes-world-with-digital-ocean/</link>
+      <pubDate>Sat, 11 Dec 2021 15:38:19 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-12-11-journey-to-the-kubernetes-world-with-digital-ocean/</guid>
+      <description>Hey all! It&amp;rsquo;s been a long time since I haven&amp;rsquo;t written a blog about Kubernetes. So I was wandering in r/devops in Reddit and saw a post where the digital ocean is hosting a Kubernetes challenge and guess what they&amp;rsquo;re giving away free credits of $120 to try it out free!!!
+This blog is written in multiple sections from steps to apply to steps to deploy your app in Digital Ocean Kubernetes via CI/CD.</description>
+    </item>
+    
+    <item>
+      <title>Scheduling pods in both Spot and On-demand nodes in EKS</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-11-19-scheduling-pods-in-both-spot-and-on-demand-nodes-in-eks/</link>
+      <pubDate>Fri, 19 Nov 2021 01:46:58 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-11-19-scheduling-pods-in-both-spot-and-on-demand-nodes-in-eks/</guid>
+      <description>History You may have faced this scenario where you wanna keep scaling up apps nodes but also under-keeping costs at a limit. Spot Instance is the way for that task. Now, how do we do that? let&amp;rsquo;s see.
+As you know there are mainly 2 types of instances in AWS, called On-demand and Spot. As the name suggests On-demand is priced highest because it&amp;rsquo;s literally on demand from your side to AWS about node requirement.</description>
+    </item>
+    
+    <item>
+      <title>A closer look at Cluster Autoscaler for EKS</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-11-13-a-closer-look-at-cluster-autoscaler-for-eks/</link>
+      <pubDate>Sat, 13 Nov 2021 21:40:26 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-11-13-a-closer-look-at-cluster-autoscaler-for-eks/</guid>
+      <description>If you&amp;rsquo;re wondering why do I write about AWS that much, that&amp;rsquo;s because AWS is the cloud on which I spend most of my work hours in Skit.ai as a DevOps Engineer.
+Ok, let&amp;rsquo;s take a look at what cluster autoscaler is and how does it work?
+Definition Cluster Autoscaler is a tool that automatically adjusts the size of the Kubernetes cluster when one of the following conditions is true:</description>
+    </item>
+    
+    <item>
+      <title>Dynamic PV in Kubernetes feat. EKS (EBS)</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-11-13-dynamic-pv-in-kubernetes-feat-eks-ebs/</link>
+      <pubDate>Sat, 13 Nov 2021 20:13:38 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-11-13-dynamic-pv-in-kubernetes-feat-eks-ebs/</guid>
+      <description>Definition Let&amp;rsquo;s Understand what&amp;rsquo;s volume resizing mean for Persistent Volumes kin KUbernetes.
+Its the ability to dynamically increase the PV size as required ( EBS volume behind the scene ).
+Problem statement Up until v1.16 EKS, you can just increase any ( PV ) EBS volume size just by running command like : kubectl edit pv your_PV and just change the size, it used to work since you have storage class of kubernetes.</description>
+    </item>
+    
+    <item>
+      <title>Monitoring K8S resource changes with kubewatch</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-10-15-monitoring-k8s-resource-changes-in-cluster-with-kubewatch/</link>
+      <pubDate>Fri, 15 Oct 2021 21:01:04 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-10-15-monitoring-k8s-resource-changes-in-cluster-with-kubewatch/</guid>
+      <description>Definition what&amp;rsquo;s kubewatch ?
+ kubewatch is a Kubernetes watcher that currently publishes notification to Slack. Deploy it in your k8s cluster, and you will get event notifications in a slack channel.
+ Lets see how we can deploy it to our cluster.
+Pre-requisites :
+ Kubernetes 1.12+ cluster Helm v3 A slack app and a channel to integrate kubewatch   Steps  Add Bitnami repo to your helm :  helm repo add bitnami https://charts.</description>
+    </item>
+    
+    <item>
+      <title>It happened again in production !!</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-10-13-it-happened-again-in-production/</link>
+      <pubDate>Wed, 13 Oct 2021 21:07:07 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-10-13-it-happened-again-in-production/</guid>
+      <description>Previously I have written https://wp.me/pcknFJ-2F&amp;quot;&amp;gt;article about how AWS pushed broken image to Docker hub and we got screwed as we were using latest as image tag.
+Welp, this happened again in our CI/CD pipeline as we were using https://github.com/chartmuseum/helm-push&amp;quot;&amp;gt;push plugin from helm and using that to push charts to https://chartmuseum.com/&amp;quot;&amp;gt;chartmuseum .
+So we were using the below line to pull the helm push plugin :
+helm plugin install https://github.com/chartmuseum/helm-push.git And were pushing to Chartmuseum via command :</description>
+    </item>
+    
+    <item>
+      <title>How to migrate a Node-Group from Multi AZ to single AZ in AWS EKS</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-10-11-how-to-migrate-all-your-worker-nodes-from-multiple-az-to-single-az-in-aws-eks/</link>
+      <pubDate>Mon, 11 Oct 2021 12:46:58 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-10-11-how-to-migrate-all-your-worker-nodes-from-multiple-az-to-single-az-in-aws-eks/</guid>
+      <description>Question After reading the above title you maybe thinking why though? moving the complete worker node fleet into single Availability Zone (AZ) is not a good solution when it comes to high availability of your Kubernetes cluster workload.
+There&amp;rsquo;s a reason at least why I had this requirement, Cost optimization in AWS.
+Background When you create a EKS cluster, it&amp;rsquo;ll have 3 subnets each correcting to a single AZ i.e 3 AZ in a region.</description>
+    </item>
+    
+    <item>
+      <title>Story of keeping CI pipeline from getting screwed when AWS pushes broken docker image to Docker hub</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-09-19-story-of-keeping-ci-pipeline-from-getting-screwed-when-aws-pushes-broken-docker-image-to-docker-hub/</link>
+      <pubDate>Sun, 19 Sep 2021 20:15:04 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-09-19-story-of-keeping-ci-pipeline-from-getting-screwed-when-aws-pushes-broken-docker-image-to-docker-hub/</guid>
+      <description>History If you&amp;rsquo;re using aws-cli docker image in your CI pipeline then this story could be useful amusing for you.
+On Thursday, I started receiving alerts that our CI pipeline is failing.
+I started checking the failed job error and it pointed out to docker is unable to install killing the pipeline.
+Installing docker Installation failed. Check that you have permissions to install. Cleaning up file based variables ERROR: Job failed: command terminated with exit code 1 After scratching the head for sometime, I found that the latest aws-cli image from amazon Docker hub repository is causing the issue as I haven&amp;rsquo;t changed anything else in the CI file in few weeks.</description>
+    </item>
+    
+    <item>
+      <title>How to access AWS EKS cluster when you mess up the aws-auth configmap</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-09-01-how-to-access-aws-eks-cluster-when-you-mess-up-the-aws-auth-configmap/</link>
+      <pubDate>Wed, 01 Sep 2021 11:34:29 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-09-01-how-to-access-aws-eks-cluster-when-you-mess-up-the-aws-auth-configmap/</guid>
+      <description>Hey people, this is not a complete solution article, but rather a cut story and a probable solution for the below problem statement when it comes to locked out issue in EKS cluster:
+ I wanted to add a user to my EKS, hence while adding the user to aws-auth configmap of my EKS cluster, I made some syntax mistakes and now neither I nor anyone can login to EKS cluster&amp;quot; whole cluster is gone, help me please !</description>
+    </item>
+    
+    <item>
+      <title>Pulling private image from Docker hub in GitLab CI</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-08-23-pulling-private-image-from-docker-hub-in-gitlab-ci/</link>
+      <pubDate>Mon, 23 Aug 2021 20:20:33 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-08-23-pulling-private-image-from-docker-hub-in-gitlab-ci/</guid>
+      <description>Hey people ! I&amp;rsquo;m back this time with a how-to on GitLab CI to make your life easy being DevOps Engineer. I thought of writing this since I spent hours searching and fixing this :/
+Lets look at the problem or the requirement. It goes like this :
+ I have a GitLab CI file integrated into my project which builds a Dockerfile and pushes that image into ECR. But the dockerfile has a base image which is from a private Docker hub repository.</description>
+    </item>
+    
+    <item>
+      <title>Configuring TP -Link TL-WR740N as WI-FI repeater</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-08-11-configuring-tp-link-tl-wr740n-as-wi-fi-repeater/</link>
+      <pubDate>Wed, 11 Aug 2021 00:36:50 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-08-11-configuring-tp-link-tl-wr740n-as-wi-fi-repeater/</guid>
+      <description>Hey people, in this article, we&amp;rsquo;ll see how to configure TP -Link TL-WR740N (preferably old one) as repeater to extend your main WI-FI signal in your house.
+Lets get into basics real quick.
+What&amp;rsquo;s a repeater ?
+Definition : A WiFi repeater or extender is used to extend the coverage area of your Wi-Fi network. It works by receiving your existing Wi-Fi signal, amplifying it and then transmitting the boosted signal.</description>
+    </item>
+    
+    <item>
+      <title>How to change DNS server for Syrotech Router [BSNL FTTH]</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-04-27-how-to-change-dns-server-for-syrotech-router-bsnl-ftth/</link>
+      <pubDate>Tue, 27 Apr 2021 18:26:11 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-04-27-how-to-change-dns-server-for-syrotech-router-bsnl-ftth/</guid>
+      <description>Ok, to be honest, I searched a lot on the internet to change ISP DNS servers to 3rd party servers (which you should !) for my router and couldn&amp;rsquo;t find a direct article / steps to do that. Hence, this article.
+Steps  Open the router login page, which is mostly : 192.168.1.1 in your case. After logging in, navigate to Network page, LAN IP Address tab. Change the Lan Dns Mode to : static Set the primary and secondary DNS address and click on Save/Apply.</description>
+    </item>
+    
+    <item>
+      <title>How to claim free Azure certification  vouchers after attending Microsoft Events</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-04-26-how-to-claim-free-azure-certification-vouchers-after-attending-microsoft-events/</link>
+      <pubDate>Mon, 26 Apr 2021 11:26:06 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-04-26-how-to-claim-free-azure-certification-vouchers-after-attending-microsoft-events/</guid>
+      <description>Microsoft is offering fundamentals exam vouchers for those who attend and complete their virtual training. You can take a look at upcoming events and register by going to Microsoft Events.
+Then you can register for the training of an exam of your choice by searching it in the page.
+So far I have seen that Microsoft offers free exam vouchers for all fundamentals exam i.e.
+  Azure Data Fundamentals</description>
+    </item>
+    
+    <item>
+      <title>How to install netstat tool in openSUSE 15</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-01-25-how-to-install-netstat-tool-in-opensuse-15/</link>
+      <pubDate>Mon, 25 Jan 2021 01:03:12 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-01-25-how-to-install-netstat-tool-in-opensuse-15/</guid>
+      <description>Even though the **netstat **tool is depreciated, sometimes we can&amp;rsquo;t stop the old habit and we arrive at a situation where its difficult to adapt to new things.
+Actually we should be using **ss **tool installed of netstat !
+All common network related tools are bundled with package net-tools.
+nwlab:/etc # rpm -qa | grep net-tools net-tools-2.0+git20170221.479bb4a-lp152.5.5.x86_64 However in openSUSE 15, the team decided to knock it off from net tools package!</description>
+    </item>
+    
+    <item>
+      <title>How to SSH into docker in PWD (Play With Docker)</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-01-22-how-to-ssh-into-docker-in-pwd-play-with-docker/</link>
+      <pubDate>Fri, 22 Jan 2021 10:28:28 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-01-22-how-to-ssh-into-docker-in-pwd-play-with-docker/</guid>
+      <description>Hey all ! For those of you who don&amp;rsquo;t know what PWD is below is short explanation :
+So, PWD stands for Play With Docker. You can deploy learn docker at free with time limit of each instance up-to 10 Hrs!
+For more info, go to : Docker Labs
+ There are two ways you can access the docker instance.
+ Use the web based console. SSH into that instance.  I always love to do ssh as it gives me more freedom.</description>
+    </item>
+    
+    <item>
+      <title>How to install mhVTL in openSUSE</title>
+      <link>https://tanmay-bhat.github.io/posts/2021-01-14-how-to-install-mhvtl-in-opensuse/</link>
+      <pubDate>Thu, 14 Jan 2021 23:42:03 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/2021-01-14-how-to-install-mhvtl-in-opensuse/</guid>
+      <description>Lets see how to install mhVTL (a FOSS VTL software) written by a super hero called : Mark Harvey.
+There are 2 ways you can install mhvtl :
+ Install the rpm package. Directly compile the source code yourself.  I have tried using the first method as its easy and fast :D.
+Note: I have tested this install in openSUSE 15.2
+Steps 1.First update the packages to latest version available by typing :</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://tanmay-bhat.github.io/sitemap.xml

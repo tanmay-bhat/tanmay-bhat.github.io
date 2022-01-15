@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kubernetes on Tanmay Bhat</title>
+    <link>https://tanmay-bhat.github.io/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on Tanmay Bhat</description>
+    <image>
+      <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 06 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to scale down Kubernetes cluster workloads during off hours</title>
+      <link>https://tanmay-bhat.github.io/posts/how-to-scale-down-kubernetes-cluster-workloads-during-off-hours/</link>
+      <pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/how-to-scale-down-kubernetes-cluster-workloads-during-off-hours/</guid>
+      <description>You heard it right, everyone needs to rest once a while, even our little Kubernetes cluster. Before we begin, here are the prerequisites :
+ Kubernetes cluster Cluster autoscaler Bit of patience  Usecase :  One of the most important aspect when it comes to running workload in cloud is to keep cost under control or tune it such that you can save extra. You maybe hosting workload in Kubernetes where you wont get traffic post business hours.</description>
+    </item>
+    
+  </channel>
+</rss>
