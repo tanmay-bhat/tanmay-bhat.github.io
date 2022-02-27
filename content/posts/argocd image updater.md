@@ -27,7 +27,7 @@ manner.
 
 ## Steps
 
-### Installation ArgoCD Image Updater
+### Installation of ArgoCD Image Updater
 
 - To install argocd image updater in your cluster ( same one as argocd), run the below command:
 
@@ -102,7 +102,7 @@ registries:
 - name: 'Digital Ocean'
   api_url: https://registry.digitalocean.com
   ping: no
-  credentials: pullsecret:argocd/SECRET_NAME ( configired from above step )      
+  credentials: pullsecret:argocd/SECRET_NAME ( configured from above step )      
   defaultns: library
   prefix: registry.digitalocean.com
 ```
@@ -119,37 +119,7 @@ There are other forms of secret configuration as well. Please refer to them [her
 - Create the Application manifest file for your application.
 - Here’s a sample definition for kube-ops-view application :
 
-```bash
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: kube-ops-view-demo
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
-  namespace: argocd
-  annotations:
-    argocd-image-updater.argoproj.io/image-list: registry.digitalocean.com/tanmaybhat/kube-ops-view
-    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/gitlab-token
-    argocd-image-updater.argoproj.io/git-branch: main
-spec:
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: kube-ops-view
-  project: default
-  source:
-    repoURL: 'https://gitlab.com/Tanmay-Bhat/argocd.git'
-    path: argocd-image-updater/charts/kube-ops-view
-    targetRevision: HEAD
-    helm:
-      valueFiles:
-        - values.yaml 
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-    - CreateNamespace=true
-```
+{{< gist tanmay-bhat d4cdfe43462b3040ba4c86b553aeb765 >}}
 
 Let’s understand the above file in detail :
 
@@ -160,7 +130,7 @@ Let’s understand the above file in detail :
     3. `git-branch`: we’ll write back to the branch: **main**.
 3. `server`: we’re deploying this to the default cluster.
 4. `namespace`: the actual namespace in which the application will be deployed.
-5. path: the path of your helm chart inside the remote git repository.
+5. `path` : the path of your helm chart inside the remote git repository.
 6. `targetRevision`: the branch name to which argocd syncs apps.
 7. Since we’re using helm, I’m updating to use values from `values.yaml` file.
 8. `CreateNamespace`: if the mentioned namespace is not found, argocd will create it.
