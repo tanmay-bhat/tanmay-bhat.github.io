@@ -9,7 +9,19 @@
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 11 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to configure Prometheus server as a remote receiver</title>
+      <link>https://tanmay-bhat.github.io/posts/prometheus-remote-reciever/</link>
+      <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/prometheus-remote-reciever/</guid>
+      <description>Push vs Pull Prometheus is by far the best OSS you can get in 2022 for self-hosted / SaaS monitoring.
+There are other solutions that grew out of Prometheus for ex Thanos or Cortex.
+I believe the reason for this is the simplicity that Prometheus offers for querying the metrics and the way it handles millions of time series.
+Before we jump into the implementation, let’s learn a bit about Prometheus Pull based mechanism for monitoring.</description>
+    </item>
+    
     <item>
       <title>Introduction to ArgoCD : apps of apps</title>
       <link>https://tanmay-bhat.github.io/posts/2022-01-11-introduction-to-argocd-apps-of-apps/</link>
