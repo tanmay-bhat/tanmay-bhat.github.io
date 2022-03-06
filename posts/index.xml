@@ -80,7 +80,8 @@ However, if you&amp;rsquo;re an early developer / DevOps engineer or in a small 
       
       <guid>https://tanmay-bhat.github.io/posts/2021-12-12-using-kaniko-to-build-and-push-images-through-gitlab-ci-to-ecr/</guid>
       <description>Introduction Though this seems like an easy straight forward task by referring to the docs, it&amp;rsquo;s not trust me!
-Until today in my Gitlab CI, I used to use aws-cli image and later install amazon-linux extras install docker and then use DIND service to build docker images through Gitlab-CI. that will change from today. I learned about the tool called Kaniko from Google which is built to simplify the docker build process without using Docker daemon hence not giving root-level privileges to the runner hence security says top-notch during the build process.</description>
+Until today in my Gitlab CI, I used to use aws-cli image and later install amazon-linux extras install docker and then use DIND service to build docker images through Gitlab-CI. that will change from today.
+I learned about the tool called Kaniko from Google which is built to simplify the docker build process without using Docker daemon hence not giving root-level privileges to the runner hence security says top-notch during the build process.</description>
     </item>
     
     <item>
