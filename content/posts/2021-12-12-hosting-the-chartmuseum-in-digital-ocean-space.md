@@ -61,7 +61,7 @@ helm repo update
 ```
   
  
-- Here, we can just run helm install since we need to tell chartmuseum to use Space as a holy place to store charts instead of local PVC ( default).
+- Here, we can't just run helm install since we need to tell chartmuseum to use Space as a holy place to store charts instead of local PVC ( default).
 - Download the chart to your local system by running :
 
  
