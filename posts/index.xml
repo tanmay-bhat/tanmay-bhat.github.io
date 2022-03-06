@@ -74,7 +74,7 @@ However, if you&amp;rsquo;re an early developer / DevOps engineer or in a small 
     </item>
     
     <item>
-      <title>Using Kaniko to build and push images to Gitlab-CI to ECR</title>
+      <title>Using Kaniko to build and push images ECR from Gitlab CI</title>
       <link>https://tanmay-bhat.github.io/posts/2021-12-12-using-kaniko-to-build-and-push-images-through-gitlab-ci-to-ecr/</link>
       <pubDate>Sun, 12 Dec 2021 12:28:22 +0000</pubDate>
       
