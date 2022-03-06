@@ -11,7 +11,9 @@ date: 2021-12-12 12:28:22.000000000 +00:00
 Though this seems like an easy straight forward task by referring to the docs, it's not trust me!
   
   
-Until today in my Gitlab CI, I used to use aws-cli image and later install amazon-linux extras install docker and then use DIND service to build docker images through Gitlab-CI. that will change from today. I learned about the tool called Kaniko from Google which is built to simplify the docker build process without using Docker daemon hence not giving root-level privileges to the runner hence security says top-notch during the build process.
+Until today in my Gitlab CI, I used to use aws-cli image and later install amazon-linux extras install docker and then use DIND service to build docker images through Gitlab-CI. that will change from today. 
+
+I learned about the tool called Kaniko from Google which is built to simplify the docker build process without using Docker daemon hence not giving root-level privileges to the runner hence security says top-notch during the build process.
   
   
 From Kaniko's doc :
@@ -19,7 +21,9 @@ From Kaniko's doc :
  
 > kaniko is a tool to build container images from a Dockerfile, inside a container or Kubernetes cluster.
   
-kaniko doesn't depend on a Docker daemon and executes each command within a Dockerfile completely in userspace. This enables building container images in environments that can't easily or securely run a Docker daemon, such as a standard Kubernetes cluster.
+kaniko doesn't depend on a Docker daemon and executes each command within a Dockerfile completely in userspace. 
+
+This enables building container images in environments that can't easily or securely run a Docker daemon, such as a standard Kubernetes cluster.
   
   
 Let's see how to achieve this in our pipeline. For simplicity, I'll be using Gitlab CI in this example. You can use circle CI or GitHub actions or anything you like (a little bit of modification required ).
@@ -43,7 +47,7 @@ AWS_SECRET_ACCESS_KEY = <your secret key>
 #### Gitlab-CI
    
   
-The GitLab CI file should look like below :
+Create a Gitlab CI file that looks like :
 
 ```yml
 image: alpine
@@ -97,8 +101,7 @@ Happy CI-CDing !!!
 Reference :
   
   
-    https://github.com/GoogleContainerTools/kaniko">https://github.com/GoogleContainerTools/kaniko 
+https://github.com/GoogleContainerTools/kaniko
   
-  
-    https://gist.github.com/tanmay-bhat/6bc6d6034644ef010d841ea8373a41d6">https://gist.github.com/tanmay-bhat/6bc6d6034644ef010d841ea8373a41d6 
+ 
   
