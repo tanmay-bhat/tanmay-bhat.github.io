@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Kaniko to build and push images to Gitlab-CI to ECR
+title: Using Kaniko to build and push images ECR from Gitlab CI
 date: 2021-12-12 12:28:22.000000000 +00:00
  
 ---
