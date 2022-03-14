@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tanmay-bhat.github.io/tags/grafana/</loc>
+    <lastmod>2022-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/posts/</loc>
+    <lastmod>2022-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/prometheus/</loc>
+    <lastmod>2022-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/posts/prometheus-self-metrics/</loc>
+    <lastmod>2022-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/</loc>
+    <lastmod>2022-03-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/</loc>
+    <lastmod>2022-03-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tanmay-bhat.github.io/tags/argocd/</loc>
     <lastmod>2022-02-27T00:00:00+00:00</lastmod>
   </url><url>
@@ -12,18 +30,6 @@
     <lastmod>2022-02-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/prometheus-remote-reciever/</loc>
-    <lastmod>2022-02-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/posts/</loc>
-    <lastmod>2022-02-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/tags/prometheus/</loc>
-    <lastmod>2022-02-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/tags/</loc>
-    <lastmod>2022-02-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/</loc>
     <lastmod>2022-02-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/2022-01-11-introduction-to-argocd-apps-of-apps/</loc>

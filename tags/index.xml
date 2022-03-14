@@ -9,7 +9,25 @@
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 27 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grafana</title>
+      <link>https://tanmay-bhat.github.io/tags/grafana/</link>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/tags/grafana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prometheus</title>
+      <link>https://tanmay-bhat.github.io/tags/prometheus/</link>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/tags/prometheus/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ArgoCD</title>
       <link>https://tanmay-bhat.github.io/tags/argocd/</link>
@@ -25,15 +43,6 @@
       <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://tanmay-bhat.github.io/tags/digitalocean/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Prometheus</title>
-      <link>https://tanmay-bhat.github.io/tags/prometheus/</link>
-      <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://tanmay-bhat.github.io/tags/prometheus/</guid>
       <description></description>
     </item>
     

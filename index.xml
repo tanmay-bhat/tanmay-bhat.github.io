@@ -9,7 +9,19 @@
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 27 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Self monitoring Prometheus with Grafana</title>
+      <link>https://tanmay-bhat.github.io/posts/prometheus-self-metrics/</link>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/prometheus-self-metrics/</guid>
+      <description>Who will monitor the monitoring system ? Itself&amp;hellip;&amp;hellip;&amp;hellip;sounds a bit magical.
+Since Prometheus monitors everything, it&amp;rsquo;s essential that we keep an eye on Prometheus so that over observability pillar stays strong.
+If Prometheus goes down, you won&amp;rsquo;t be having any metrics, hence no alert for any services, scary stuff along with a call from your boss !!
+Configuring Prometheus to monitor itself Prometheus exposes metrics about itself at /metrics endpoint, hence it can scrape and monitor its own health.</description>
+    </item>
+    
     <item>
       <title>ArgoCD Image Updater with Digital Ocean Container Registry</title>
       <link>https://tanmay-bhat.github.io/posts/argocd-image-updater/</link>
