@@ -9,7 +9,19 @@
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 14 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to configure Readiness Probe alert in Prometheus</title>
+      <link>https://tanmay-bhat.github.io/posts/configure-readiness-probe-alert-prometheus/</link>
+      <pubDate>Tue, 29 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/configure-readiness-probe-alert-prometheus/</guid>
+      <description>This article aims to explain the steps to configure Readiness Probe failure alert in Prometheus.
+Definition : Readiness Probe in Kubernetes is a probing mechanism to detect health (ready status) of a pod and if the health is intact, then allow the traffic to the pod.
+From the official doc,
+ Sometimes, applications are temporarily unable to serve traffic. For example, an application might need to load large data or configuration files during startup, or depend on external services after startup.</description>
+    </item>
+    
     <item>
       <title>Self monitoring Prometheus with Grafana</title>
       <link>https://tanmay-bhat.github.io/posts/prometheus-self-metrics/</link>
@@ -24,20 +36,20 @@ Configuring Prometheus to monitor itself Prometheus exposes metrics about itself
     
     <item>
       <title>ArgoCD Image Updater with Digital Ocean Container Registry</title>
-      <link>https://tanmay-bhat.github.io/posts/argocd-image-updater/</link>
+      <link>https://tanmay-bhat.github.io/posts/getting-started-with-argocd-image-updater/</link>
       <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://tanmay-bhat.github.io/posts/argocd-image-updater/</guid>
+      <guid>https://tanmay-bhat.github.io/posts/getting-started-with-argocd-image-updater/</guid>
       <description>What&amp;rsquo;s on Image Updater  A tool to automatically update the container images of Kubernetes workloads that are managed by Argo CD.
  Capabilities :  Argo CD Image Updater can check for new versions of the container images that are deployed with your Kubernetes workloads and automatically update them to their latest allowed version using Argo CD. It works by setting appropriate application parameters for Argo CD applications, i.e. similar to argocd app set --helm-set image.</description>
     </item>
     
     <item>
       <title>How to configure Prometheus server as a remote receiver</title>
-      <link>https://tanmay-bhat.github.io/posts/prometheus-remote-reciever/</link>
+      <link>https://tanmay-bhat.github.io/posts/how-to-configure-prometheus-server-as-a-remote-receiver/</link>
       <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://tanmay-bhat.github.io/posts/prometheus-remote-reciever/</guid>
+      <guid>https://tanmay-bhat.github.io/posts/how-to-configure-prometheus-server-as-a-remote-receiver/</guid>
       <description>Push vs Pull Prometheus is by far the best OSS you can get in 2022 for self-hosted / SaaS monitoring.
 There are other solutions that grew out of Prometheus for ex Thanos or Cortex.
 I believe the reason for this is the simplicity that Prometheus offers for querying the metrics and the way it handles millions of time series.
