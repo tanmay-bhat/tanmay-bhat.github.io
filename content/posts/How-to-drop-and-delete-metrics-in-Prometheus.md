@@ -172,7 +172,7 @@ scrape_configs:
 - Depending on your retention period, the old time series will be removed once it reaches the retention, by default it's 15 days.
 - However, if you want to delete the stored metrics to clear up space, you can follow the below steps to achieve that.
 
-## Deletion of single metric
+## Deletion of single metric: 
 
 1. In order to delete a series based on label, first you need to enable Admin API. You can enable the flag `-web.enable-admin-api` to do that. The complete command will look like this : 
 
