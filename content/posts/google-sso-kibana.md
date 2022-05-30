@@ -7,7 +7,7 @@ tags: ["Kubernetes", "Kibana"]
 
 **OAuth2 Proxy** is a reverse proxy that provides authentication using Providers such as Google, GitHub, and others to validate accounts by email, domain or group.
 
-In this article, we’ll setup and configure OAuth2 Proxy to setup Google SSO for Kibana in Kubernetes.
+In this article, we’ll setup and configure OAuth2 Proxy to enable Google SSO for Kibana in Kubernetes.
 
 ### Prerequisite:
 
@@ -82,7 +82,7 @@ EOF
 ## Setup Ingress annotation for Kibana
 
 1. This article assumes you already have a Kibana setup running in Kubernetes with an Ingress.
-2. Append the two nginx annotations mentioned below to existing Kibana Ingress. Once , the Ingress should look similar to : 
+2. Append the two nginx annotations mentioned below to existing Kibana Ingress. Once updated, the Ingress should look similar to : 
 
 ```yml
 apiVersion: networking.k8s.io/v1
@@ -107,7 +107,7 @@ spec:
         pathType: ImplementationSpecific
 ```
 
-- Now if you hit the endpoint [kibana.example.com](http://kibana.example.com). it should ask you to login via Google.
+- Now if you hit the endpoint [kibana.example.com](http://kibana.example.com). It should ask you to login via Google.
 
 ![kibana-sso](/kibana-google.png)
 
