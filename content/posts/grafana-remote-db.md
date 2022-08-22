@@ -3,11 +3,15 @@ layout: post
 title: How to Configure Grafana to Use Remote Database for HA
 date: 2022-08-22
 tags: ["Grafana"]
+
+
 ---
 
 ![Grafana HA diagram](/grafana-ha.png)
 
-In this article, we’ll see how to setup Grafana with a remote database so that we can scale Grafana to N instances. The Default SQLite database will not work with scaling beyond 1 instance since the SQLite3 DB is embedded inside Grafana container.
+In this article, we’ll see how to setup Grafana with a remote database so that we can scale Grafana to N instances. 
+
+The default SQLite database will not work with scaling beyond 1 instance since the SQLite3 DB is embedded inside Grafana container.
 
 
 
@@ -55,7 +59,7 @@ flyctl postgres connect -a grafana
 
 Since we’re using remote database, when the first time Grafana starts, it starts DB migration and that will fail if it can't find a database called `grafana`.
 
-Hence, let’s create the DB using the command below ( via psql client) : 
+Hence, let’s create the DB using the command below (via psql client) : 
 
 ```sql
 create database grafana;
@@ -63,7 +67,7 @@ create database grafana;
 
 ## Grafana with Docker-Compose
 
-Once the DB is up & running, let's create a `docker-compose.yaml` file for our Grafana: 
+Once the DB is up and running, let's create a `docker-compose.yaml` file for our Grafana: 
 
 ```bash
 version: '3'
@@ -74,11 +78,11 @@ services:
     ports:
     - 3000:3000
 		environment:
-		      - GF_DATABASE_NAME=grafana
-		      - GF_DATABASE_USER=postgres
-		      - GF_DATABASE_PASSWORD=super-secret-password
-		      - GF_DATABASE_TYPE=postgres
-		      - GF_DATABASE_HOST=host.docker.internal:5432
+      - GF_DATABASE_NAME=grafana
+      - GF_DATABASE_USER=postgres
+      - GF_DATABASE_PASSWORD=super-secret-password
+      - GF_DATABASE_TYPE=postgres
+      - GF_DATABASE_HOST=host.docker.internal:5432
 ```
 
 - Please update the environment variables as per your DB details.
@@ -102,12 +106,12 @@ logger=migrator t=2022-08-20T15:24:29.5825907Z level=info msg="Executing migrati
 ### **Gotchas**
 
 - In the above example, I’ve mentioned DB host as `host.docker.internal` since my DB is accessible through [localhost](http://localhost) of the host machine.
-- If its AWS RDS or similar managed DB, just mention the DB connection URL and enable SSL verification.
+- If it's AWS RDS or similar managed DB, just mention the DB connection URL and enable SSL verification.
 - Regarding DB user, for this example, I haven’t created a separate DB user, but if you’re running a similar setup in production, it is highly advised that you create one.
 
 ### Data Persistence in Docker
 
-- The v9 version of Grafana stores almost all data inside its database, including alert configurations.
+- Grafana v9 stores almost all data inside its database, including alert configurations.
 - We can check that by listing the tables inside our Grafana database :
 
 ```sql
@@ -162,11 +166,11 @@ services:
     expose:
       - "3000"    
 		environment:
-		      - GF_DATABASE_NAME=grafana
-		      - GF_DATABASE_USER=postgres
-		      - GF_DATABASE_PASSWORD=super-secret-password
-		      - GF_DATABASE_TYPE=postgres
-		      - GF_DATABASE_HOST=host.docker.internal:5432
+      - GF_DATABASE_NAME=grafana
+      - GF_DATABASE_USER=postgres
+      - GF_DATABASE_PASSWORD=super-secret-password
+      - GF_DATABASE_TYPE=postgres
+      - GF_DATABASE_HOST=host.docker.internal:5432
     deploy:
       replicas: 2
   nginx:
@@ -204,7 +208,7 @@ http {
 
 ### Data Persistence & HA in Kubernetes
 
-- For this demo I’ll be using [minikube](https://minikube.sigs.k8s.io) as my Kubernetes cluster.
+- For this demo, I’ll be using [minikube](https://minikube.sigs.k8s.io) as my Kubernetes cluster.
 
 - First, let’s install Grafana using [helm](https://helm.sh/).
 
@@ -244,7 +248,7 @@ helm install grafana grafana/grafana -f custom-values.yaml
 Any number of pods you scale up for Grafana, they all now will connect to a shared Database.
 
 ### Gotchas
-If you don’t have a shared database for Grafana and try to scale the replicas to > 1 it may result in unexpected results because by default each pod will have its own *SQLite3 DB* and they wont be in sync.
+If you don’t have a shared database for Grafana and try to scale the replicas to > 1 it may result in unexpected results because by default each pod will have its own *SQLite3 DB* and they won't be in sync.
 
 For example, I have 2 Grafana replicas running without a shared database connection.
 
@@ -255,7 +259,7 @@ grafana-975c48997-kw5vk   1/1     Running   0          65m
 grafana-975c48997-sq9wl   1/1     Running   0          65m
 ```
 
-After port-forwarding, I added a data source along with a dashboard for for it.
+After port-forwarding, I added a data source along with a dashboard for it.
 
 The first pod is receiving traffic, and the second pod has no clue what’s happening on the other side.
 
@@ -274,7 +278,7 @@ level=info msg="Successful Login" User=admin@localhost
 level=error msg="Failed to look up user based on cookie" error="user token not found"
 ```
 
-To keep it fair, I even observed the traffic flow to those pods using Linkerd. As you can see the requests are almost equally balanced between pods : 
+To keep it fair, I even observed the traffic flow to those pods using Linkerd. As you can see, the requests are almost equally balanced between pods : 
 
 ```yaml
 linkerd viz stat pod grafana-55d88bb8b9-445dk grafana-55d88bb8b9-mrnf9
