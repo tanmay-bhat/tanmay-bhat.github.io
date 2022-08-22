@@ -18,7 +18,7 @@
       <guid>https://tanmay-bhat.github.io/posts/google-sso-kibana/</guid>
       <description>OAuth2 Proxy is a reverse proxy that provides authentication using Providers such as Google, GitHub, and others to validate accounts by email, domain or group.
 In this article, we’ll setup and configure OAuth2 Proxy to enable Google SSO for Kibana in Kubernetes.
-Prerequisite:  Kibana in Kubernetes Nginx Ingress  Setup Google Credentials  In Google Cloud Console, select OAuth consent screen Select the User Type as : “Internal” Complete the app registration form with your Authorized domain, then click Save.</description>
+Prerequisite: Kibana in Kubernetes Nginx Ingress Setup Google Credentials In Google Cloud Console, select OAuth consent screen Select the User Type as : “Internal” Complete the app registration form with your Authorized domain, then click Save.</description>
     </item>
     
     <item>
@@ -30,7 +30,7 @@ Prerequisite:  Kibana in Kubernetes Nginx Ingress  Setup Google Credentials  In 
       <description>This article aims to explain the steps to configure Readiness Probe failure alert in Prometheus.
 Definition : Readiness Probe in Kubernetes is a probing mechanism to detect health (ready status) of a pod and if the health is intact, then allow the traffic to the pod.
 From the official doc,
- Sometimes, applications are temporarily unable to serve traffic. For example, an application might need to load large data or configuration files during startup, or depend on external services after startup.</description>
+Sometimes, applications are temporarily unable to serve traffic. For example, an application might need to load large data or configuration files during startup, or depend on external services after startup.</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@ From the official doc,
       
       <guid>https://tanmay-bhat.github.io/posts/how-to-scale-down-kubernetes-cluster-workloads-during-off-hours/</guid>
       <description>You heard it right, everyone needs to rest once a while, even our little Kubernetes cluster. Before we begin, here are the prerequisites :
- Kubernetes cluster Cluster autoscaler Bit of patience  Usecase :  One of the most important aspect when it comes to running workload in cloud is to keep cost under control or tune it such that you can save extra. You maybe hosting workload in Kubernetes where you wont get traffic post business hours.</description>
+Kubernetes cluster Cluster autoscaler Bit of patience Usecase : One of the most important aspect when it comes to running workload in cloud is to keep cost under control or tune it such that you can save extra. You maybe hosting workload in Kubernetes where you wont get traffic post business hours.</description>
     </item>
     
   </channel>

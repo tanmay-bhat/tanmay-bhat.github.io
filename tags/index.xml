@@ -9,7 +9,16 @@
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grafana</title>
+      <link>https://tanmay-bhat.github.io/tags/grafana/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/tags/grafana/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Kibana</title>
       <link>https://tanmay-bhat.github.io/tags/kibana/</link>
@@ -34,15 +43,6 @@
       <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://tanmay-bhat.github.io/tags/prometheus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Grafana</title>
-      <link>https://tanmay-bhat.github.io/tags/grafana/</link>
-      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://tanmay-bhat.github.io/tags/grafana/</guid>
       <description></description>
     </item>
     

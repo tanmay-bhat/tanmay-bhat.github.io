@@ -17,7 +17,7 @@
       
       <guid>https://tanmay-bhat.github.io/posts/how-to-prevent-metrics-explosion-in-prometheus/</guid>
       <description>In this article, let’s go over some common metric sources and how to prevent the explosion of the metrics over time from them in Prometheus.
-1. Node exporter:  Node exporter by default exposes ~ 977 different metrics per node. Depending on labels, this can easily by default create 1000 time series the moment node-exporter is started.   Although 1000 metrics per node doesn’t look huge at the beginning, but if you’re sending these metrics to any cloud vendor like Grafana cloud, AWS Prometheus and Google Cloud for Prometheus, this can be unnecessary cost burn as all cloud vendors calculate cost based on number of time series sent &amp;amp; stored.</description>
+1. Node exporter: Node exporter by default exposes ~ 977 different metrics per node. Depending on labels, this can easily by default create 1000 time series the moment node-exporter is started. Although 1000 metrics per node doesn’t look huge at the beginning, but if you’re sending these metrics to any cloud vendor like Grafana cloud, AWS Prometheus and Google Cloud for Prometheus, this can be unnecessary cost burn as all cloud vendors calculate cost based on number of time series sent &amp;amp; stored.</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@ In this article we’ll look at both identifying, dropping them at source and de
       <description>In this article, let&amp;rsquo;s try to estimate the Prometheus storage required for an environment.
 Prometheus stores data in a time-series format and over time the targets which send metrics to the Prometheus server will get increased hence the number of metrics Prometheus ingests &amp;amp; stores will increase too leading to disk space issues.
 From the docs:
- Prometheus stores an average of only 1-2 bytes per sample. Thus, to plan the capacity of a Prometheus server, you can use the rough formula :</description>
+Prometheus stores an average of only 1-2 bytes per sample. Thus, to plan the capacity of a Prometheus server, you can use the rough formula :</description>
     </item>
     
     <item>
@@ -52,7 +52,7 @@ From the docs:
       <description>This article aims to explain the steps to configure Readiness Probe failure alert in Prometheus.
 Definition : Readiness Probe in Kubernetes is a probing mechanism to detect health (ready status) of a pod and if the health is intact, then allow the traffic to the pod.
 From the official doc,
- Sometimes, applications are temporarily unable to serve traffic. For example, an application might need to load large data or configuration files during startup, or depend on external services after startup.</description>
+Sometimes, applications are temporarily unable to serve traffic. For example, an application might need to load large data or configuration files during startup, or depend on external services after startup.</description>
     </item>
     
     <item>

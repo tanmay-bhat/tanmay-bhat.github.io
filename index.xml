@@ -9,7 +9,17 @@
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Configure Grafana to Use Remote Database for HA</title>
+      <link>https://tanmay-bhat.github.io/posts/grafana-remote-db/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/grafana-remote-db/</guid>
+      <description>In this article, we’ll see how to setup Grafana with a remote database so that we can scale Grafana to N instances. The Default SQLite database will not work with scaling beyond 1 instance since the SQLite3 DB is embedded inside Grafana container.
+Create Remote PostgreSQL using fly.io (Optional) For this demonstration, I’ll be using fly.io’s PostgreSQL service. Its free (no need to add credit card) and it has 1 GB of storage for DB and should be enough to try out with Grafana.</description>
+    </item>
+    
     <item>
       <title>How to enable Google SSO in Kibana using OAuth2 Proxy [Kubernetes]</title>
       <link>https://tanmay-bhat.github.io/posts/google-sso-kibana/</link>
@@ -18,7 +28,7 @@
       <guid>https://tanmay-bhat.github.io/posts/google-sso-kibana/</guid>
       <description>OAuth2 Proxy is a reverse proxy that provides authentication using Providers such as Google, GitHub, and others to validate accounts by email, domain or group.
 In this article, we’ll setup and configure OAuth2 Proxy to enable Google SSO for Kibana in Kubernetes.
-Prerequisite:  Kibana in Kubernetes Nginx Ingress  Setup Google Credentials  In Google Cloud Console, select OAuth consent screen Select the User Type as : “Internal” Complete the app registration form with your Authorized domain, then click Save.</description>
+Prerequisite: Kibana in Kubernetes Nginx Ingress Setup Google Credentials In Google Cloud Console, select OAuth consent screen Select the User Type as : “Internal” Complete the app registration form with your Authorized domain, then click Save.</description>
     </item>
     
     <item>
@@ -28,7 +38,7 @@ Prerequisite:  Kibana in Kubernetes Nginx Ingress  Setup Google Credentials  In 
       
       <guid>https://tanmay-bhat.github.io/posts/how-to-prevent-metrics-explosion-in-prometheus/</guid>
       <description>In this article, let’s go over some common metric sources and how to prevent the explosion of the metrics over time from them in Prometheus.
-1. Node exporter:  Node exporter by default exposes ~ 977 different metrics per node. Depending on labels, this can easily by default create 1000 time series the moment node-exporter is started.   Although 1000 metrics per node doesn’t look huge at the beginning, but if you’re sending these metrics to any cloud vendor like Grafana cloud, AWS Prometheus and Google Cloud for Prometheus, this can be unnecessary cost burn as all cloud vendors calculate cost based on number of time series sent &amp;amp; stored.</description>
+1. Node exporter: Node exporter by default exposes ~ 977 different metrics per node. Depending on labels, this can easily by default create 1000 time series the moment node-exporter is started. Although 1000 metrics per node doesn’t look huge at the beginning, but if you’re sending these metrics to any cloud vendor like Grafana cloud, AWS Prometheus and Google Cloud for Prometheus, this can be unnecessary cost burn as all cloud vendors calculate cost based on number of time series sent &amp;amp; stored.</description>
     </item>
     
     <item>
@@ -51,7 +61,7 @@ In this article we’ll look at both identifying, dropping them at source and de
       <description>In this article, let&amp;rsquo;s try to estimate the Prometheus storage required for an environment.
 Prometheus stores data in a time-series format and over time the targets which send metrics to the Prometheus server will get increased hence the number of metrics Prometheus ingests &amp;amp; stores will increase too leading to disk space issues.
 From the docs:
- Prometheus stores an average of only 1-2 bytes per sample. Thus, to plan the capacity of a Prometheus server, you can use the rough formula :</description>
+Prometheus stores an average of only 1-2 bytes per sample. Thus, to plan the capacity of a Prometheus server, you can use the rough formula :</description>
     </item>
     
     <item>
@@ -63,7 +73,7 @@ From the docs:
       <description>This article aims to explain the steps to configure Readiness Probe failure alert in Prometheus.
 Definition : Readiness Probe in Kubernetes is a probing mechanism to detect health (ready status) of a pod and if the health is intact, then allow the traffic to the pod.
 From the official doc,
- Sometimes, applications are temporarily unable to serve traffic. For example, an application might need to load large data or configuration files during startup, or depend on external services after startup.</description>
+Sometimes, applications are temporarily unable to serve traffic. For example, an application might need to load large data or configuration files during startup, or depend on external services after startup.</description>
     </item>
     
     <item>
@@ -84,8 +94,8 @@ Configuring Prometheus to monitor itself Prometheus exposes metrics about itself
       <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://tanmay-bhat.github.io/posts/getting-started-with-argocd-image-updater/</guid>
-      <description>What&amp;rsquo;s on Image Updater  A tool to automatically update the container images of Kubernetes workloads that are managed by Argo CD.
- Capabilities :  Argo CD Image Updater can check for new versions of the container images that are deployed with your Kubernetes workloads and automatically update them to their latest allowed version using Argo CD. It works by setting appropriate application parameters for Argo CD applications, i.e. similar to argocd app set --helm-set image.</description>
+      <description>What&amp;rsquo;s on Image Updater A tool to automatically update the container images of Kubernetes workloads that are managed by Argo CD.
+Capabilities : Argo CD Image Updater can check for new versions of the container images that are deployed with your Kubernetes workloads and automatically update them to their latest allowed version using Argo CD. It works by setting appropriate application parameters for Argo CD applications, i.e. similar to argocd app set --helm-set image.</description>
     </item>
     
     <item>
@@ -106,7 +116,7 @@ Before we jump into the implementation, let’s learn a bit about Prometheus Pul
       <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://tanmay-bhat.github.io/posts/2022-01-11-introduction-to-argocd-apps-of-apps/</guid>
-      <description>What&amp;rsquo;s Apps of Apps or Cluster bootstrapping ?  The App of Apps Pattern helps us define a root Application. So, rather than point to an application manifest fort every application creation, the Root App points to a folder which contains the Application YAML definition for each child App. Each child app’s Application YAML then points to a directory containing the actual application manifests be it in manifest file, Helm or Kustomize.</description>
+      <description>What&amp;rsquo;s Apps of Apps or Cluster bootstrapping ? The App of Apps Pattern helps us define a root Application. So, rather than point to an application manifest fort every application creation, the Root App points to a folder which contains the Application YAML definition for each child App. Each child app’s Application YAML then points to a directory containing the actual application manifests be it in manifest file, Helm or Kustomize.</description>
     </item>
     
     <item>
@@ -116,7 +126,7 @@ Before we jump into the implementation, let’s learn a bit about Prometheus Pul
       
       <guid>https://tanmay-bhat.github.io/posts/how-to-scale-down-kubernetes-cluster-workloads-during-off-hours/</guid>
       <description>You heard it right, everyone needs to rest once a while, even our little Kubernetes cluster. Before we begin, here are the prerequisites :
- Kubernetes cluster Cluster autoscaler Bit of patience  Usecase :  One of the most important aspect when it comes to running workload in cloud is to keep cost under control or tune it such that you can save extra. You maybe hosting workload in Kubernetes where you wont get traffic post business hours.</description>
+Kubernetes cluster Cluster autoscaler Bit of patience Usecase : One of the most important aspect when it comes to running workload in cloud is to keep cost under control or tune it such that you can save extra. You maybe hosting workload in Kubernetes where you wont get traffic post business hours.</description>
     </item>
     
     <item>
@@ -212,10 +222,10 @@ Problem statement Up until v1.16 EKS, you can just increase any ( PV ) EBS volum
       
       <guid>https://tanmay-bhat.github.io/posts/2021-10-15-monitoring-k8s-resource-changes-in-cluster-with-kubewatch/</guid>
       <description>Definition what&amp;rsquo;s kubewatch ?
- kubewatch is a Kubernetes watcher that currently publishes notification to Slack. Deploy it in your k8s cluster, and you will get event notifications in a slack channel.
- Lets see how we can deploy it to our cluster.
+kubewatch is a Kubernetes watcher that currently publishes notification to Slack. Deploy it in your k8s cluster, and you will get event notifications in a slack channel.
+Lets see how we can deploy it to our cluster.
 Pre-requisites :
- Kubernetes 1.12+ cluster Helm v3 A slack app and a channel to integrate kubewatch   Steps  Add Bitnami repo to your helm :  helm repo add bitnami https://charts.</description>
+Kubernetes 1.12+ cluster Helm v3 A slack app and a channel to integrate kubewatch Steps Add Bitnami repo to your helm : helm repo add bitnami https://charts.bitnami.com/bitnami Verify that kubewatch chart is available in the repo : demo&amp;gt; helm search repo kubewatch NAME CHART VERSION APP VERSION DESCRIPTION bitnami/kubewatch 3.</description>
     </item>
     
     <item>
@@ -260,7 +270,7 @@ Installing docker Installation failed. Check that you have permissions to instal
       
       <guid>https://tanmay-bhat.github.io/posts/2021-09-01-how-to-access-aws-eks-cluster-when-you-mess-up-the-aws-auth-configmap/</guid>
       <description>Hey people, this is not a complete solution article, but rather a cut story and a probable solution for the below problem statement when it comes to locked out issue in EKS cluster:
- I wanted to add a user to my EKS, hence while adding the user to aws-auth configmap of my EKS cluster, I made some syntax mistakes and now neither I nor anyone can login to EKS cluster&amp;quot; whole cluster is gone, help me please !</description>
+I wanted to add a user to my EKS, hence while adding the user to aws-auth configmap of my EKS cluster, I made some syntax mistakes and now neither I nor anyone can login to EKS cluster&amp;quot; whole cluster is gone, help me please !</description>
     </item>
     
     <item>
@@ -271,7 +281,7 @@ Installing docker Installation failed. Check that you have permissions to instal
       <guid>https://tanmay-bhat.github.io/posts/2021-08-23-pulling-private-image-from-docker-hub-in-gitlab-ci/</guid>
       <description>Hey people ! I&amp;rsquo;m back this time with a how-to on GitLab CI to make your life easy being DevOps Engineer. I thought of writing this since I spent hours searching and fixing this :/
 Lets look at the problem or the requirement. It goes like this :
- I have a GitLab CI file integrated into my project which builds a Dockerfile and pushes that image into ECR. But the dockerfile has a base image which is from a private Docker hub repository.</description>
+I have a GitLab CI file integrated into my project which builds a Dockerfile and pushes that image into ECR. But the dockerfile has a base image which is from a private Docker hub repository.</description>
     </item>
     
     <item>
@@ -293,7 +303,7 @@ Definition : A WiFi repeater or extender is used to extend the coverage area of
       
       <guid>https://tanmay-bhat.github.io/posts/2021-04-27-how-to-change-dns-server-for-syrotech-router-bsnl-ftth/</guid>
       <description>Ok, to be honest, I searched a lot on the internet to change ISP DNS servers to 3rd party servers (which you should !) for my router and couldn&amp;rsquo;t find a direct article / steps to do that. Hence, this article.
-Steps  Open the router login page, which is mostly : 192.168.1.1 in your case. After logging in, navigate to Network page, LAN IP Address tab. Change the Lan Dns Mode to : static Set the primary and secondary DNS address and click on Save/Apply.</description>
+Steps Open the router login page, which is mostly : 192.168.1.1 in your case. After logging in, navigate to Network page, LAN IP Address tab. Change the Lan Dns Mode to : static Set the primary and secondary DNS address and click on Save/Apply.</description>
     </item>
     
     <item>
@@ -305,7 +315,8 @@ Steps  Open the router login page, which is mostly : 192.168.1.1 in your case. A
       <description>Microsoft is offering fundamentals exam vouchers for those who attend and complete their virtual training. You can take a look at upcoming events and register by going to Microsoft Events.
 Then you can register for the training of an exam of your choice by searching it in the page.
 So far I have seen that Microsoft offers free exam vouchers for all fundamentals exam i.e.
-  Azure Data Fundamentals</description>
+Azure Data Fundamentals
+Azure Fundamentals</description>
     </item>
     
     <item>
@@ -329,8 +340,8 @@ nwlab:/etc # rpm -qa | grep net-tools net-tools-2.0+git20170221.479bb4a-lp152.5.
       <description>Hey all ! For those of you who don&amp;rsquo;t know what PWD is below is short explanation :
 So, PWD stands for Play With Docker. You can deploy learn docker at free with time limit of each instance up-to 10 Hrs!
 For more info, go to : Docker Labs
- There are two ways you can access the docker instance.
- Use the web based console. SSH into that instance.  I always love to do ssh as it gives me more freedom.</description>
+There are two ways you can access the docker instance.
+Use the web based console. SSH into that instance. I always love to do ssh as it gives me more freedom.</description>
     </item>
     
     <item>
@@ -341,7 +352,7 @@ For more info, go to : Docker Labs
       <guid>https://tanmay-bhat.github.io/posts/2021-01-14-how-to-install-mhvtl-in-opensuse/</guid>
       <description>Lets see how to install mhVTL (a FOSS VTL software) written by a super hero called : Mark Harvey.
 There are 2 ways you can install mhvtl :
- Install the rpm package. Directly compile the source code yourself.  I have tried using the first method as its easy and fast :D.
+Install the rpm package. Directly compile the source code yourself. I have tried using the first method as its easy and fast :D.
 Note: I have tested this install in openSUSE 15.2
 Steps 1.First update the packages to latest version available by typing :</description>
     </item>
@@ -354,7 +365,7 @@ Steps 1.First update the packages to latest version available by typing :</descr
       <guid>https://tanmay-bhat.github.io/about/</guid>
       <description>Hey there 👋
 My name is Tanmay and I am a DevOps/Cloud Engineer based in Banglore.
-Education 🎓  Aug 16 - Jun 19 : Banglore University  Bachelor of Science (BSc) in Computer Science    Skills 💻  Cloud : AWS, GCP, DigitalOcean IaC : Terraform, CrossPlane Orchestration : Kubernetes, Docker, ECS CI/CD : ArgoCD, FluxCD, Gitlab CI, Github Action Monitoring &amp;amp; logging : Prometheus, Grafana, Loki, Cloudwatch Service Mesh : Linkerd  Work Experience 💼   April 22 - Present : Unbxd</description>
+Education 🎓 Aug 16 - Jun 19 : Banglore University Bachelor of Science (BSc) in Computer Science Skills 💻 Cloud : AWS, GCP, DigitalOcean IaC : Terraform, CrossPlane Orchestration : Kubernetes, Docker, ECS CI/CD : ArgoCD, FluxCD, Gitlab CI, Github Action Monitoring &amp;amp; logging : Prometheus, Grafana, Loki, Cloudwatch Service Mesh : Linkerd Work Experience 💼 April 22 - Present : Unbxd</description>
     </item>
     
     
