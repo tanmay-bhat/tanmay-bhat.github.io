@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://tanmay-bhat.github.io/tags/grafana/</loc>
-    <lastmod>2022-08-22T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tanmay-bhat.github.io/posts/grafana-remote-db/</loc>
-    <lastmod>2022-08-22T00:00:00+00:00</lastmod>
+    <loc>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana-ohmgraphite/</loc>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/</loc>
-    <lastmod>2022-08-22T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/prometheus/</loc>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/tags/</loc>
-    <lastmod>2022-08-22T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/</loc>
+    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/posts/how-to-configure-grafana-to-use-remote-database-for-ha/</loc>
     <lastmod>2022-08-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/google-sso-kibana/</loc>
@@ -27,9 +33,6 @@
     <lastmod>2022-05-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/how-to-prevent-metrics-explosion-in-prometheus/</loc>
-    <lastmod>2022-04-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/tags/prometheus/</loc>
     <lastmod>2022-04-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/how-to-drop-and-delete-metrics-in-prometheus/</loc>

@@ -9,7 +9,17 @@
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 03 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/prometheus/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/prometheus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Monitor Gaming Laptop Using Grafana and OhmGraphite</title>
+      <link>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana-ohmgraphite/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana-ohmgraphite/</guid>
+      <description>I’ve recently got a gaming laptop and monitoring the CPU &amp;amp; GPU temperature of it has been a tedious task, like install MSI Afterburner, configure statistics server, configure overlay etc.
+That made me use Grafana’s product suite to configure monitoring of key components such as CPU, GPU, Network, Disk and alerting for my laptop such that I can game in peace and when my laptop’s temperature reaches a certain threshold limit, I’ll get a phone call.</description>
+    </item>
+    
     <item>
       <title>How to prevent metrics explosion in Prometheus</title>
       <link>https://tanmay-bhat.github.io/posts/how-to-prevent-metrics-explosion-in-prometheus/</link>

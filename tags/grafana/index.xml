@@ -9,13 +9,23 @@
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 22 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Monitor Gaming Laptop Using Grafana and OhmGraphite</title>
+      <link>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana-ohmgraphite/</link>
+      <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana-ohmgraphite/</guid>
+      <description>I’ve recently got a gaming laptop and monitoring the CPU &amp;amp; GPU temperature of it has been a tedious task, like install MSI Afterburner, configure statistics server, configure overlay etc.
+That made me use Grafana’s product suite to configure monitoring of key components such as CPU, GPU, Network, Disk and alerting for my laptop such that I can game in peace and when my laptop’s temperature reaches a certain threshold limit, I’ll get a phone call.</description>
+    </item>
+    
     <item>
       <title>How to Configure Grafana to Use Remote Database for HA</title>
-      <link>https://tanmay-bhat.github.io/posts/grafana-remote-db/</link>
+      <link>https://tanmay-bhat.github.io/posts/how-to-configure-grafana-to-use-remote-database-for-ha/</link>
       <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://tanmay-bhat.github.io/posts/grafana-remote-db/</guid>
+      <guid>https://tanmay-bhat.github.io/posts/how-to-configure-grafana-to-use-remote-database-for-ha/</guid>
       <description>In this article, we’ll see how to setup Grafana with a remote database so that we can scale Grafana to N instances.
 The default SQLite database will not work with scaling beyond 1 instance since the SQLite3 DB is embedded inside Grafana container.
 Create Remote PostgreSQL using fly.io (Optional) For this demonstration, I’ll be using fly.io’s PostgreSQL service. Its free (no need to add credit card) and it has 1 GB of storage for DB and should be enough to try out with Grafana.</description>
