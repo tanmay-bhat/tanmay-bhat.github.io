@@ -156,7 +156,7 @@ scrape_configs:
 
 Once everything is setup, you can Import the Dashboard-ID : [11587](https://grafana.com/grafana/dashboards/11587) in your Grafana to visualize the metrics collected.
 
-I’ve  updated few panels from the imported dashboard. For example for CPU temperature, my PromQL query is :
+I’ve  updated a few panels from the imported dashboard. For example for CPU temperature, my PromQL query is :
 
 ```bash
 avg_over_time(ohm_cpu_celsius{instance="$instance"}[5m])
@@ -166,19 +166,19 @@ Here’s how my Grafana Dashboard looks after the edit :
 
 ![Dashbaord Overview](/dashboard_overview.png)
 
-CPU :
+CPU Metrics:
 
 ![CPU Dashboard](/d_cpu.png)
 
-GPU :
+GPU Metrics:
 
 ![GPU Dashboard](/d_gpu.png)
 
 ### Alerting
 
-I don’t want to have a overlay of CPU and GPU temperatures on my screen while I’m gaming. Hence I thought, Instead of having an overlay, why not create alerts for high temperatures and integrate those alerts to Grafana Oncall such that when my laptop is hot, I’ll get a call because who checks messages while gaming :D.
+I don’t want to have an overlay of CPU and GPU temperatures on my screen while I’m gaming. Hence, I thought, Instead of having an overlay, why not create alerts for high temperatures and integrate those alerts to Grafana OnCall such that when my laptop is hot, I’ll get a call because who checks messages while gaming :D.
 
-**Alert for High CPU temperature**
+**Alert for High CPU Temperature**
 
  I’ve configured the alert threshold to 80 degree. So, if my laptop CPU temperature stays above 80 degree for 5 minutes straight, I’ll get a phone call. Here’s how my alert config looks like.
 
@@ -188,7 +188,7 @@ I don’t want to have a overlay of CPU and GPU temperatures on my screen while 
 
 Once I receive the call, I can choose to lower the game resolution and continue to play which should give a bit of breathing room for my laptop or close it so that laptop can cool itself.
 
-**Alert for High GPU temperature**
+**Alert for High GPU Temperature**
 
 Same config goes for GPU temperature alert as well. I’m averaging out the temperature value since I don’t want to be paged for a temperature spike. I’d like the alert to be fired only when the temperature is consistently higher than the threshold.
 
@@ -198,11 +198,11 @@ Same config goes for GPU temperature alert as well. I’m averaging out the temp
 
 There’s no specific requirement to use Grafana’s new alerting. If you’d like to use your own AlertManager, you can easily write an alert config by referring to an example from **[Awesome Prometheus alerts](https://awesome-prometheus-alerts.grep.to/).**
 
-For notification configuration, use the **`<webhook_config>`** section and use the webhook from Grafana Oncall’s integration. Here’s the [doc](https://prometheus.io/docs/alerting/latest/configuration/#webhook_config) for webhook config options for AlertManager.
+For notification configuration, use the **`<webhook_config>`** section and use the webhook from Grafana OnCall’s integration. Here’s the [doc](https://prometheus.io/docs/alerting/latest/configuration/#webhook_config) for webhook config options for AlertManager.
 
-### Grafana Oncall
+### Grafana OnCall
 
-Configuring Grafana Oncall is fairly simple for Phone call alerts.
+Configuring Grafana OnCall is fairly simple for Phone call alerts.
 
 1. Create or verify the user which phone number on the Users section. Set the Default notification Method to : Phone
 
