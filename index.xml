@@ -9,7 +9,17 @@
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 29 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automate Your Helm Chart Testing Workflow with GitHub Actions</title>
+      <link>https://tanmay-bhat.github.io/posts/helm-chart-testing-github-actions/</link>
+      <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/helm-chart-testing-github-actions/</guid>
+      <description>Helm is a popular open-source package manager for Kubernetes that simplifies the process of installing, upgrading, and managing applications on a Kubernetes cluster. Helm packages, called charts, contain all of the necessary resources and configuration for deploying an application on a Kubernetes cluster.
+As with any software project, it&amp;rsquo;s important to test charts before deploying them to ensure that they are reliable and function as intended. Chart testing is the process of verifying the functionality and correctness of a Helm chart before it is deployed to a Kubernetes cluster.</description>
+    </item>
+    
     <item>
       <title>Monitor Gaming Laptop Using Grafana and OhmGraphite</title>
       <link>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana-ohmgraphite/</link>

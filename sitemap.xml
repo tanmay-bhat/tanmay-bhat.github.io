@@ -2,22 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tanmay-bhat.github.io/posts/helm-chart-testing-github-actions/</loc>
+    <lastmod>2022-12-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/helm/</loc>
+    <lastmod>2022-12-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/kubernetes/</loc>
+    <lastmod>2022-12-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/posts/</loc>
+    <lastmod>2022-12-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/</loc>
+    <lastmod>2022-12-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/</loc>
+    <lastmod>2022-12-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tanmay-bhat.github.io/tags/grafana/</loc>
     <lastmod>2022-08-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana-ohmgraphite/</loc>
     <lastmod>2022-08-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tanmay-bhat.github.io/posts/</loc>
-    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://tanmay-bhat.github.io/tags/prometheus/</loc>
-    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/tags/</loc>
-    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/</loc>
     <lastmod>2022-08-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/how-to-configure-grafana-to-use-remote-database-for-ha/</loc>
@@ -27,9 +36,6 @@
     <lastmod>2022-05-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/tags/kibana/</loc>
-    <lastmod>2022-05-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/tags/kubernetes/</loc>
     <lastmod>2022-05-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/how-to-prevent-metrics-explosion-in-prometheus/</loc>
