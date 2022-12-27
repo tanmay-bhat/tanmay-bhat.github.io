@@ -5,15 +5,15 @@ date: 2022-12-27
 tags: ["Helm", "Kubernetes"]
 ---
 
-Helm is a popular open-source package manager for Kubernetes that simplifies the process of installing, upgrading, and managing applications on a Kubernetes cluster. Helm packages, called charts, contain all of the necessary resources and configuration for deploying an application on a Kubernetes cluster.
+Helm is a popular open-source package manager for Kubernetes that simplifies the process of installing, upgrading, and managing applications on a Kubernetes cluster. Helm packages, called charts, contain all the necessary resources and configuration for deploying an application on a Kubernetes cluster.
 
 As with any software project, it's important to test charts before deploying them to ensure that they are reliable and function as intended. Chart testing is the process of verifying the functionality and correctness of a Helm chart before it is deployed to a Kubernetes cluster.
 
-There are a variety of tools and approaches available for testing Helm charts, ranging from simple shell scripts to more advanced testing frameworks. In this blog post, we'll explore how to use the [chart-testing](https://github.com/helm/chart-testing) tool, which is maintained by the Helm project, to test Helm charts with Github Actions.
+There are a variety of tools and approaches available for testing Helm charts, ranging from simple shell scripts to more advanced testing frameworks. In this blog post, we'll explore how to use the [chart-testing](https://GitHub.com/helm/chart-testing) tool, which is maintained by the Helm project, to test Helm charts with GitHub Actions.
 
-## Helm Chart Testing for Pull Requests
+## Helm Chart Testing with Pull Requests
 
-1. Lets create a new file in the `.github/workflows` directory of your repository called `chart-testing.yml`. This file will define the workflow and specify the steps required to run the chart tests.
+1. Lets create a new file in the `.GitHub/workflows` directory of your repository called `chart-testing.yml`. This file will define the workflow and specify the steps required to run the chart tests.
 
 Update the `chart-testing.yml` file with below contents : 
 
@@ -47,7 +47,7 @@ jobs:
         run: |
           changed=$(ct list-changed --config ct.yaml)
           if [[ -n "$changed" ]]; then
-            echo "{changed}={true}" >> $GITHUB_OUTPUT
+            echo "{changed}={true}" >> $GitHub_OUTPUT
           fi
 
       - name: Run chart-testing (lint)
@@ -68,12 +68,12 @@ Let’s understand the above config in detail.
 - `Set up Helm`: This step uses the `azure/setup-helm@v3` action to install and set up Helm v3 latest on the machine.
 - `Set up Python`: This step uses the `actions/setup-python@v4` action to install and set up Python on the machine. The `python-version` parameter is set to `3.7`.
 - `Set up chart-testing`: This step uses the `helm/chart-testing-action@v2.3.1` action to install and set up chart-testing, a tool for testing Helm charts.
-- `Run chart-testing (list-changed)`: This step runs the `ct list-changed` command using chart-testing to list the charts that have changed since the last commit by referring to the `main` target branch. The `id` field is used to give this step an identifier, which can be used to reference it later in the workflow execution. If there are changed charts, the step sets an output named `changed` to `true` using the `echo "{changed}={true}" >> $GITHUB_OUTPUT` syntax.
+- `Run chart-testing (list-changed)`: This step runs the `ct list-changed` command using chart-testing to list the charts that have changed since the last commit by referring to the `main` target branch. The `id` field is used to give this step an identifier, which can be used to reference it later in the workflow execution. If there are changed charts, the step sets an output named `changed` to `true` using the `echo "{changed}={true}" >> $GitHub_OUTPUT` syntax.
 - `Run chart-testing (lint)`: This step runs the `ct lint` command using chart-testing to lint the charts in the repository.
 - `Create kind cluster`: This step uses the `helm/kind-action@v1.5.0` action to create a Kubernetes cluster using kind (Kubernetes IN Docker). The `if` field is used to specify that this step should only be run if the `changed` output of the `list-changed` step is `true`. I.e this step will only run if there are changes in the helm charts compared to main branch helm charts, basically git diff between them result should not be empty.
 - `Run chart-testing (install)`: This step runs the `ct install` command using chart-testing to install the charts in the repository into the kind cluster.
 
-2. Now, create a file called `ct.yaml` which will store the configs for the chart-testing : 
+2. Now, create a file called `ct.yaml` which will store the configs for the chart-testing: 
 
 ```bash
 target-branch: main
@@ -109,7 +109,7 @@ Repository
 
 Now that we have configure, we can see the flow in action.
 
-Consider a case where I wanted to enable Ingress for my app, but didn’t complete the all correct values in the helm chart and pushed to my `test-branch` .
+Consider a case where we wanted to enable Ingress for my app, but didn’t complete the all correct values in the helm chart and pushed to my `test-branch` .
 
 ```bash
 #supplied values for my-app
@@ -126,7 +126,7 @@ As you can see the below, the Action failed :
 
 ![helm-actions-fail-image](/helm-actions-fail.png)
 
-Since the problem is with helm templating, the lint step passses correctly.
+Since the problem is with helm templating, the lint step passsed sucessfully.
 
 ```bash
 Run ct lint --config ct.yaml
@@ -169,9 +169,9 @@ Installing chart "my-app => (version: \"0.2.8\", path: \"my-app\")"...
 Error: INSTALLATION FAILED: Ingress.extensions "my-app-ingress" is invalid: spec.rules[0].http.paths: Required value
 ```
 
-### Trigger Github Actions for Push and other Events
+### Trigger GitHub Actions for Push and other Events
 
-Similar to the above cconfig, you can just configure Github actions to trigger whenever a push to the main ( or any other) branch happens. Or you can combine the trigger with push and pull reqeuest.
+Similar to the above config, you can just configure GitHub actions to trigger whenever a push to the main (or any other) branch happens. Or you can combine the trigger with push and pull request.
 
 ```bash
 #For both 
@@ -193,6 +193,7 @@ on:
       - main
       - develop
 ```
+You can more about GitHub workflow trigger events [here](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows).
 
 ## Specifying Multiple Helm Values Files
 
@@ -222,7 +223,7 @@ It will iterate over every `values-*.yaml` and the chart is installed and tested
 
 ### Helm Upgrades
 
-To test an in-place upgrade of a chart you can use the `upgrade` flag with the `ct install`
+To test an in-place upgrade of a chart, you can use the `upgrade` flag with the `ct install`
  command. This flag will cause chart-testing to test an in-place upgrade of the chart from its previous revision.
 
 Add `upgrade: true` into your `ct.yaml` to enable the upgrade of the Helm charts.
@@ -233,12 +234,12 @@ If the current version should not introduce a breaking change according to the S
 
 When testing Helm charts that have dependencies on other charts, it is important to ensure that these dependencies are properly installed and configured in order for the tests to be successful. By default, `ct install` handles dependency of helm charts i.e it will run `helm dependency build` to fetch the chart specified.
 
-- You need add the repository in `ct.yaml` so that repository index can be fetched, Bitnami in this example :
+- You need to add the repository in `ct.yaml` so that repository index can be fetched, Bitnami in this example :
 ```
 chart-repos:
   - bitnami=https://charts.bitnami.com/bitnami
 ```
-- Next you need to specify the required chart in your `Chart.yaml` of your specific helm chart, Redis for Example : 
+- Next, you need to specify the required chart in your `Chart.yaml` of your specific helm chart, Redis for Example : 
 ```
 dependencies:
   - name: redis
@@ -257,8 +258,8 @@ redis:
 
 ### References :
 
-[https://github.com/helm/chart-testing](https://github.com/helm/chart-testing)
+[https://GitHub.com/helm/chart-testing](https://GitHub.com/helm/chart-testing)
 
-[https://github.com/marketplace/actions/helm-chart-testing](https://github.com/marketplace/actions/helm-chart-testing)
+[https://GitHub.com/marketplace/actions/helm-chart-testing](https://GitHub.com/marketplace/actions/helm-chart-testing)
 
-[https://docs.github.com/en/actions/using-jobs/using-jobs-in-a-workflow#overview](https://docs.github.com/en/actions/using-jobs/using-jobs-in-a-workflow#overview)
+[https://docs.GitHub.com/en/actions/using-jobs/using-jobs-in-a-workflow#overview](https://docs.GitHub.com/en/actions/using-jobs/using-jobs-in-a-workflow#overview)
