@@ -13,7 +13,7 @@ There are a variety of tools and approaches available for testing Helm charts, r
 
 ## Helm Chart Testing with Pull Requests
 
-1. Lets create a new file in the `.GitHub/workflows` directory of your repository called `chart-testing.yml`. This file will define the workflow and specify the steps required to run the chart tests.
+1. Lets create a new file in the `.github/workflows` directory of your repository called `chart-testing.yml`. This file will define the workflow and specify the steps required to run the chart tests.
 
 Update the `chart-testing.yml` file with below contents : 
 
@@ -47,7 +47,7 @@ jobs:
         run: |
           changed=$(ct list-changed --config ct.yaml)
           if [[ -n "$changed" ]]; then
-            echo "{changed}={true}" >> $GitHub_OUTPUT
+            echo "{changed}={true}" >> $GITHUB_OUTPUT
           fi
 
       - name: Run chart-testing (lint)
@@ -68,7 +68,7 @@ Let’s understand the above config in detail.
 - `Set up Helm`: This step uses the `azure/setup-helm@v3` action to install and set up Helm v3 latest on the machine.
 - `Set up Python`: This step uses the `actions/setup-python@v4` action to install and set up Python on the machine. The `python-version` parameter is set to `3.7`.
 - `Set up chart-testing`: This step uses the `helm/chart-testing-action@v2.3.1` action to install and set up chart-testing, a tool for testing Helm charts.
-- `Run chart-testing (list-changed)`: This step runs the `ct list-changed` command using chart-testing to list the charts that have changed since the last commit by referring to the `main` target branch. The `id` field is used to give this step an identifier, which can be used to reference it later in the workflow execution. If there are changed charts, the step sets an output named `changed` to `true` using the `echo "{changed}={true}" >> $GitHub_OUTPUT` syntax.
+- `Run chart-testing (list-changed)`: This step runs the `ct list-changed` command using chart-testing to list the charts that have changed since the last commit by referring to the `main` target branch. The `id` field is used to give this step an identifier, which can be used to reference it later in the workflow execution. If there are changed charts, the step sets an output named `changed` to `true` using the `echo "{changed}={true}" >> $GITHUB_OUTPUT` syntax.
 - `Run chart-testing (lint)`: This step runs the `ct lint` command using chart-testing to lint the charts in the repository.
 - `Create kind cluster`: This step uses the `helm/kind-action@v1.5.0` action to create a Kubernetes cluster using kind (Kubernetes IN Docker). The `if` field is used to specify that this step should only be run if the `changed` output of the `list-changed` step is `true`. I.e this step will only run if there are changes in the helm charts compared to main branch helm charts, basically git diff between them result should not be empty.
 - `Run chart-testing (install)`: This step runs the `ct install` command using chart-testing to install the charts in the repository into the kind cluster.
