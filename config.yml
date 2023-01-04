@@ -61,7 +61,7 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: Tanmay Bhat
-    subtitle: "DevOps || Cloud Engineer"
+    subtitle: "SRE || DevOps Engineer"
     imageUrl: "tanmay-memoji.jpeg"
     imageWidth: 250
     imageHeight: 250
@@ -90,6 +90,8 @@ params:
       url: "https://github.com/tanmay-bhat/"
     - name: linkedin
       url: "https://www.linkedin.com/in/tanmay-bhat-024/"
+    - name: KoFi
+      url: "https://ko-fi.com/tanmaybhat"
 
   analytics:
     google:

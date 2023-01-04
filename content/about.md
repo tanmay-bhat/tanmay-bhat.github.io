@@ -14,7 +14,7 @@ enableInlineShortcodes: true
 ---
 Hey there :wave:
 
-My name is Tanmay and I am a DevOps/Cloud Engineer based in Banglore.
+My name is Tanmay and I am a SRE / DevOps Engineer based in Banglore, India.
 
 ## Education :mortar_board:
 * _Aug 16 - Jun 19_ : Banglore University
@@ -25,15 +25,6 @@ My name is Tanmay and I am a DevOps/Cloud Engineer based in Banglore.
 * _IaC_ :  Terraform, CrossPlane
 * _Orchestration_ : Kubernetes, Docker, ECS
 * _CI/CD_ : ArgoCD, FluxCD, Gitlab CI, Github Action
-* _Monitoring_ & logging : Prometheus, Grafana, Loki, Cloudwatch
-* _Service Mesh_ : Linkerd
+* _Monitoring_ & logging : Prometheus, Victoria Metrics, Thanos, Grafana, Loki, AWS Cloudwatch
+* _Service Mesh_ : Cilium, Linkerd
 
-## Work Experience :briefcase:
-* _April 22 - Present_ : Unbxd
-  * DevOps Engineer
-
-* _May 21 - April 22_ : Skit.ai
-  * DevOps Engineer
-
-* _Sep 19 - May 21_ : Wipro
-  * Enterprise Backup Administrator
