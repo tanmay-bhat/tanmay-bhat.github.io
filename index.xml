@@ -385,8 +385,8 @@ Steps 1.First update the packages to latest version available by typing :</descr
       
       <guid>https://tanmay-bhat.github.io/about/</guid>
       <description>Hey there 👋
-My name is Tanmay and I am a DevOps/Cloud Engineer based in Banglore.
-Education 🎓 Aug 16 - Jun 19 : Banglore University Bachelor of Science (BSc) in Computer Science Skills 💻 Cloud : AWS, GCP, DigitalOcean IaC : Terraform, CrossPlane Orchestration : Kubernetes, Docker, ECS CI/CD : ArgoCD, FluxCD, Gitlab CI, Github Action Monitoring &amp;amp; logging : Prometheus, Grafana, Loki, Cloudwatch Service Mesh : Linkerd Work Experience 💼 April 22 - Present : Unbxd</description>
+My name is Tanmay and I am a SRE / DevOps Engineer based in Banglore, India.
+Education 🎓 Aug 16 - Jun 19 : Banglore University Bachelor of Science (BSc) in Computer Science Skills 💻 Cloud : AWS, GCP, DigitalOcean IaC : Terraform, CrossPlane Orchestration : Kubernetes, Docker, ECS CI/CD : ArgoCD, FluxCD, Gitlab CI, Github Action Monitoring &amp;amp; logging : Prometheus, Victoria Metrics, Thanos, Grafana, Loki, AWS Cloudwatch Service Mesh : Cilium, Linkerd </description>
     </item>
     
     
