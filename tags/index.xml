@@ -5,11 +5,39 @@
     <link>https://tanmay-bhat.github.io/tags/</link>
     <description>Recent content in Tags on Tanmay Bhat</description>
     <image>
+      <title>Tanmay Bhat</title>
       <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 27 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fluentd</title>
+      <link>https://tanmay-bhat.github.io/tags/fluentd/</link>
+      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/tags/fluentd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logging</title>
+      <link>https://tanmay-bhat.github.io/tags/logging/</link>
+      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/tags/logging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>syslog</title>
+      <link>https://tanmay-bhat.github.io/tags/syslog/</link>
+      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/tags/syslog/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Helm</title>
       <link>https://tanmay-bhat.github.io/tags/helm/</link>
