@@ -10,7 +10,18 @@
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 27 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Configure Alerting on Ingress-NGINX in Kubernetes</title>
+      <link>https://tanmay-bhat.github.io/posts/slo-based-alert-on-ingress-nginx/</link>
+      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/slo-based-alert-on-ingress-nginx/</guid>
+      <description>In this blog post, we will be discussing how to set up monitoring and alerting for Nginx ingress in a Kubernetes environment.
+We will cover the installation and configuration of ingress-nginx, Prometheus and Grafana, and the setup of alerts for key Ingress metrics.
+Pre-requisites : A Kubernetes cluster Helm v3 Install Prometheus and Grafana In this step, we will install Prometheus to collect metrics, and Grafana to visualize and create alerts based on those metrics.</description>
+    </item>
+    
     <item>
       <title>Automate Your Helm Chart Testing Workflow with GitHub Actions</title>
       <link>https://tanmay-bhat.github.io/posts/helm-chart-testing-github-actions/</link>

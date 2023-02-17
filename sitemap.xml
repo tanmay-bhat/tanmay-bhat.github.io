@@ -23,22 +23,28 @@
     <loc>https://tanmay-bhat.github.io/</loc>
     <lastmod>2023-02-17T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://tanmay-bhat.github.io/posts/slo-based-alert-on-ingress-nginx/</loc>
+    <lastmod>2023-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/ingress/</loc>
+    <lastmod>2023-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/kubernetes/</loc>
+    <lastmod>2023-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/prometheus/</loc>
+    <lastmod>2023-01-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tanmay-bhat.github.io/posts/helm-chart-testing-github-actions/</loc>
     <lastmod>2022-12-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/tags/helm/</loc>
     <lastmod>2022-12-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tanmay-bhat.github.io/tags/kubernetes/</loc>
-    <lastmod>2022-12-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://tanmay-bhat.github.io/tags/grafana/</loc>
     <lastmod>2022-08-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana-ohmgraphite/</loc>
-    <lastmod>2022-08-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/tags/prometheus/</loc>
     <lastmod>2022-08-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/how-to-configure-grafana-to-use-remote-database-for-ha/</loc>
