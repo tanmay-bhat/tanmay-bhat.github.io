@@ -1,6 +1,6 @@
 ---
 layout: post
-title: An Overview of Syslog parsing with Fluentd
+title: An Overview of Syslog Parsing with Fluentd
 date: 2023-02-17
 tags: ["Fluentd", "logging", "syslog"]
 ---
