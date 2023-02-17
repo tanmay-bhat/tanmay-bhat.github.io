@@ -145,7 +145,7 @@ tail -f /var/log/td-agent/td-agent.log
 2023-02-11 09:12:33.541000000 +0000 syslog.local2.notice: {"host":"chiefb2b.org","ident":"eum","pid":"1867","msgid":"ID551","extradata":"-","message":"You can't compress the array without backing up the bluetooth ADP card!"}
 ```
 
-The above are the syslog messages that are parsed by Fluentd. That's why you can see the messages are seggregated into multiple fields like `host`, `host` etc that will help in readability, complex search queries and faster indexing.
+The above are the syslog messages that are parsed by Fluentd. That's why you can see the messages are segregated into multiple fields like `host`, `host` etc that will help in readability, complex search queries and faster indexing.
 
 
 ### Parsing rfc3164 syslog with Fluentd :
@@ -217,7 +217,7 @@ tail -f /var/log/td-agent/td-agent.log
 
 ### Parsing both rfc5424 and rfc3164 syslog with Fluentd :
 
-If you're receiving both rfc5424 and rfc3164 syslog messages, you can use `message_format`:`auto`in Fluentd configuration to parse both formats:
+If you're receiving both rfc5424 and rfc3164 syslog messages, then you can use `message_format`:`auto`in Fluentd configuration to parse both formats:
 
 ```conf
   <parse>
@@ -225,8 +225,9 @@ If you're receiving both rfc5424 and rfc3164 syslog messages, you can use `messa
     with_priority true
     message_format auto
   </parse>
-
+```
 ---
 ### Resources : 
 Fluentd syslog input plugin : https://docs.fluentd.org/input/syslog
+
 Ruby regex validator : https://rubular.com/
