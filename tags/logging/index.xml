@@ -10,7 +10,18 @@
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 17 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/logging/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 30 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/logging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Add Custom Label or Key to Records in Fluentd</title>
+      <link>https://tanmay-bhat.github.io/posts/how-to-add-custom-labels-or-keys-to-records-in-fluentd/</link>
+      <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/how-to-add-custom-labels-or-keys-to-records-in-fluentd/</guid>
+      <description>Fluentd is a powerful log collection and processing tool. In this blog post, I will walk you through the process of adding custom labels and keys to your Fluentd records, so that you can better understand your logs and filter them more effectively.
+For example, you might want to add a custom label to your records to indicate the environment in which the log was generated, or the cluster name. This would allow you to filter your logs by environment or cluster name in Elasticsearch or another storage destination.</description>
+    </item>
+    
     <item>
       <title>An Overview of Syslog Parsing with Fluentd</title>
       <link>https://tanmay-bhat.github.io/posts/syslog-parsing-with-fluentd/</link>
