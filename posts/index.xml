@@ -18,7 +18,7 @@
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://tanmay-bhat.github.io/posts/how-to-add-custom-labels-or-keys-to-records-in-fluentd/</guid>
-      <description>Fluentd is a powerful log collection and processing tool. In this blog post, I will walk you through the process of adding custom labels and keys to your Fluentd records, so that you can better understand your logs and filter them more effectively.
+      <description>Fluentd is a powerful log collection and processing tool. In this blog post, I will walk you through the process of adding custom label and key to the log records, so that you can better understand your logs and filter them more effectively.
 For example, you might want to add a custom label to your records to indicate the environment in which the log was generated, or the cluster name. This would allow you to filter your logs by environment or cluster name in Elasticsearch or another storage destination.</description>
     </item>
     
