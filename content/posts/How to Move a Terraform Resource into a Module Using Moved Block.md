@@ -1,14 +1,16 @@
 ---
 layout: post
-title: 'How to Move a Terraform Resource into a Module Using Moved Block'
+title: 'How to Move a Terraform Resource Into a Module Using Moved Block'
 date: 2023-11-04
 tags: ["terraform", "aws"]
 ---
- Starting from v1.1, Terraform provides a powerful feature known as the `moved` block. This feature allows you to reorganize your Terraform configuration without causing Terraform to perceive the refactor as a deletion and creation of resources. In this article, we will walk through a few examples of Terraform refactoring using the `moved` block.
+ Starting from v1.1, Terraform provides a powerful feature known as the `moved` block. This feature allows you to reorganize your Terraform configuration without causing Terraform to perceive the refactor as a deletion and creation of resources. 
+ 
+ In this article, we will walk through a few examples of Terraform refactoring using the `moved` block.
 
 ## Prerequisites
 
-- Terraform ( >=1.1)
+- Terraform (>=1.1)
 
 ## Move a Resource Into Module
 
@@ -23,17 +25,9 @@ resource "aws_s3_bucket" "moved_demo" {
 }
 ```
 
-Then, initialize Terraform and apply the configuration, which will create the S3 bucket. If we list
-
-```bash
-terraform state list
-aws_s3_bucket.moved_demo
-```
-
 Now, let's create a module directory `./modules/aws/s3` and move the `./lab-demo/s3.tf` into `./modules/aws/`. The directory structure should look like this:
 
 ```bash
-.
 ├── lab-demo
 │   ├── main.tf
 │   ├── s3.tf # Moved to ./modules/aws/s3/s3.tf
@@ -56,6 +50,7 @@ If we run `terraform init && terraform plan` now, Terraform will propose to dest
 ```terraform
   # aws_s3_bucket.moved_demo will be destroyed
   # (because aws_s3_bucket.moved_demo is not in configuration)
+  ...
   ...
    # module.s3.aws_s3_bucket.moved_demo will be created
 ```
@@ -93,7 +88,6 @@ Once you apply the configuration, you can remove the `moved` block from the `./l
 The `moved` block can also be used to move resources between modules. Let's create a new module `./modules/aws/another_module` and move the `./modules/aws/s3/s3.tf` into `./modules/aws/another_module`. The directory structure should look like this:
 
 ```bash
-.
 ├── lab-demo
 │   ├── main.tf
 │   ├── modules
