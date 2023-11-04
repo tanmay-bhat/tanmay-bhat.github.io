@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>aws on Tanmay Bhat</title>
+    <link>https://tanmay-bhat.github.io/tags/aws/</link>
+    <description>Recent content in aws on Tanmay Bhat</description>
+    <image>
+      <title>Tanmay Bhat</title>
+      <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 04 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Move a Terraform Resource into a Module Using Moved Block</title>
+      <link>https://tanmay-bhat.github.io/posts/how-to-move-a-terraform-resource-into-a-module-using-moved-block/</link>
+      <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/how-to-move-a-terraform-resource-into-a-module-using-moved-block/</guid>
+      <description>Starting from v1.1, Terraform provides a powerful feature known as the moved block. This feature allows you to reorganize your Terraform configuration without causing Terraform to perceive the refactor as a deletion and creation of resources. In this article, we will walk through a few examples of Terraform refactoring using the moved block.
+Prerequisites Terraform ( &amp;gt;=1.1) Move a Resource Into Module First, we will create a sample S3 bucket to reference as a standalone resource.</description>
+    </item>
+    
+  </channel>
+</rss>
