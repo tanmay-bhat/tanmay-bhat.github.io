@@ -19,7 +19,7 @@
       
       <guid>https://tanmay-bhat.github.io/posts/multiple-aws-profile-zsh/</guid>
       <description>ZSH functions are a great way to automate tasks and make your life easier. I’ve been using ZSH for a while now, and I recently started using functions to automate tasks that I do on a daily basis.
-Every day, I routinely switch between various AWS profiles, depending on thr account and the role that I’m working on. So I wanted to make it easier to switch between profiles.
+Every day, I routinely switch between various AWS profiles, depending on the account and the role that I’m working on. So I wanted to make it easier to switch between profiles.
 In this blog, we’ll see how we can use ZSH functions to switch between AWS profiles.</description>
     </item>
     
