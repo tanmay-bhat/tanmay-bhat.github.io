@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>aws on Tanmay Bhat</title>
-    <link>https://tanmay-bhat.github.io/tags/aws/</link>
-    <description>Recent content in aws on Tanmay Bhat</description>
+    <title>linux on Tanmay Bhat</title>
+    <link>https://tanmay-bhat.github.io/tags/linux/</link>
+    <description>Recent content in linux on Tanmay Bhat</description>
     <image>
       <title>Tanmay Bhat</title>
       <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 08 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Switch Between Multiple AWS Profiles In Terminal Using ZSH Functions</title>
       <link>https://tanmay-bhat.github.io/posts/multiple-aws-profile-zsh/</link>
@@ -21,17 +21,6 @@
       <description>ZSH functions are a great way to automate tasks and make your life easier. I’ve been using ZSH for a while now, and I recently started using functions to automate tasks that I do on a daily basis.
 Every day, I routinely switch between various AWS profiles, depending on thr account and the role that I’m working on. So I wanted to make it easier to switch between profiles.
 In this blog, we’ll see how we can use ZSH functions to switch between AWS profiles.</description>
-    </item>
-    
-    <item>
-      <title>How to Move a Terraform Resource Into a Module Using Moved Block</title>
-      <link>https://tanmay-bhat.github.io/posts/how-to-move-a-terraform-resource-into-a-module-using-moved-block/</link>
-      <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://tanmay-bhat.github.io/posts/how-to-move-a-terraform-resource-into-a-module-using-moved-block/</guid>
-      <description>Starting from v1.1, Terraform provides a powerful feature known as the moved block. This feature allows you to reorganize your Terraform configuration without causing Terraform to perceive the refactor as a deletion and creation of resources.
-In this article, we will walk through a few examples of Terraform refactoring using the moved block.
-Prerequisites Terraform (&amp;gt;=1.1) Move a Resource Into Module First, we will create a sample S3 bucket to reference as a standalone resource.</description>
     </item>
     
   </channel>

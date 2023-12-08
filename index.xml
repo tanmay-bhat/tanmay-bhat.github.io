@@ -11,7 +11,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 04 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Switch Between Multiple AWS Profiles In Terminal Using ZSH Functions</title>
+      <link>https://tanmay-bhat.github.io/posts/multiple-aws-profile-zsh/</link>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanmay-bhat.github.io/posts/multiple-aws-profile-zsh/</guid>
+      <description>ZSH functions are a great way to automate tasks and make your life easier. I’ve been using ZSH for a while now, and I recently started using functions to automate tasks that I do on a daily basis.
+Every day, I routinely switch between various AWS profiles, depending on thr account and the role that I’m working on. So I wanted to make it easier to switch between profiles.
+In this blog, we’ll see how we can use ZSH functions to switch between AWS profiles.</description>
+    </item>
+    
     <item>
       <title>How to Move a Terraform Resource Into a Module Using Moved Block</title>
       <link>https://tanmay-bhat.github.io/posts/how-to-move-a-terraform-resource-into-a-module-using-moved-block/</link>
