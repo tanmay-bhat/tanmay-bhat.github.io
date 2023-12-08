@@ -7,7 +7,7 @@ tags: ["AWS", "linux"]
 
 ZSH functions are a great way to automate tasks and make your life easier. I’ve been using ZSH for a while now, and I recently started using functions to automate tasks that I do on a daily basis.
 
-Every day, I routinely switch between various AWS profiles, depending on thr account and the role that I’m working on. So I wanted to make it easier to switch between profiles.
+Every day, I routinely switch between various AWS profiles, depending on the account and the role that I’m working on. So I wanted to make it easier to switch between profiles.
 
 In this blog, we’ll see how we can use ZSH functions to switch between AWS profiles. Along with customizing the prompt to show the current AWS profile that we’re using so that we are sure on the account before deleting a database.
 
@@ -62,11 +62,9 @@ A detailed guide on how to configure AWS CLI with different profiles can be foun
 
 ## ZSH Functions with OhMyZsh
 
-Since we’re using OhMyZsh, we can create a custom plugin and add the functions there.
-
 In OhMyZsh, we can create a custom config inside `$ZSH_CUSTOM`. Any `*.zsh` file inside `$ZSH_CUSTOM` will be loaded automatically.
 
-Lets create a file called `$ZSH_CUSTOM/aws.zsh` folder and add the below code : 
+Let's create a file called `$ZSH_CUSTOM/aws.zsh` folder and add the below code : 
 
 ```bash
 # function to list all the profiles in ~/.aws/config
@@ -138,7 +136,7 @@ asp prod-observer
 asr us-west-2
 ```
 
-Once you save both the files and open a new terminal, you should see the below output : 
+Once you save both the files and open a new terminal, you should see the below in your prompt of new terminal : 
 
 ```bash
 (prod-observer:us-west-2) ➜  ~
