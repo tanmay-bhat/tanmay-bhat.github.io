@@ -14,6 +14,12 @@
     <loc>https://tanmay-bhat.github.io/posts/</loc>
     <lastmod>2023-12-29T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/prometheus/</loc>
+    <lastmod>2023-12-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/posts/restrict-label-values-prometheus/</loc>
+    <lastmod>2023-12-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tanmay-bhat.github.io/tags/</loc>
     <lastmod>2023-12-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -57,9 +63,6 @@
     <lastmod>2023-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/tags/kubernetes/</loc>
-    <lastmod>2023-01-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/tags/prometheus/</loc>
     <lastmod>2023-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/helm-chart-testing-github-actions/</loc>

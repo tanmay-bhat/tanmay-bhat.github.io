@@ -23,6 +23,14 @@ Create a RSA key pair Begin by creating an RSA key pair. The private key will si
 ssh-keygen -t rsa -b 4096 -m PEM -f grafana.</description>
     </item>
     <item>
+      <title>Restricting Label Values in Prometheus via prom-label-proxy</title>
+      <link>https://tanmay-bhat.github.io/posts/restrict-label-values-prometheus/</link>
+      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/restrict-label-values-prometheus/</guid>
+      <description>You might have come across the situation where you want to restrict certain cluster or environment specific data from being queried by users, for example finance data or other business critical data and not every Grafana user should be able to see this data. This is where label-proxy comes in handy.
+Label-proxy is a small proxy that sits between Grafana and Prometheus and restricts the label values that are being queried.</description>
+    </item>
+    <item>
       <title>Switch Between Multiple AWS Profiles In Terminal Using ZSH Functions</title>
       <link>https://tanmay-bhat.github.io/posts/multiple-aws-profile-zsh/</link>
       <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>

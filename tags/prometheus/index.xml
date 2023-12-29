@@ -11,8 +11,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 Dec 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/prometheus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Restricting Label Values in Prometheus via prom-label-proxy</title>
+      <link>https://tanmay-bhat.github.io/posts/restrict-label-values-prometheus/</link>
+      <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/restrict-label-values-prometheus/</guid>
+      <description>You might have come across the situation where you want to restrict certain cluster or environment specific data from being queried by users, for example finance data or other business critical data and not every Grafana user should be able to see this data. This is where label-proxy comes in handy.
+Label-proxy is a small proxy that sits between Grafana and Prometheus and restricts the label values that are being queried.</description>
+    </item>
     <item>
       <title>How to Configure Alerting on Ingress-NGINX in Kubernetes</title>
       <link>https://tanmay-bhat.github.io/posts/slo-based-alert-on-ingress-nginx/</link>
