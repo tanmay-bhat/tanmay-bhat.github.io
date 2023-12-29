@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kibana on Tanmay Bhat</title>
     <link>https://tanmay-bhat.github.io/tags/kibana/</link>
@@ -11,17 +11,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://tanmay-bhat.github.io/tags/kibana/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tanmay-bhat.github.io/tags/kibana/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to enable Google SSO in Kibana using OAuth2 Proxy [Kubernetes]</title>
       <link>https://tanmay-bhat.github.io/posts/google-sso-kibana/</link>
       <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://tanmay-bhat.github.io/posts/google-sso-kibana/</guid>
       <description>OAuth2 Proxy is a reverse proxy that provides authentication using Providers such as Google, GitHub, and others to validate accounts by email, domain or group.
 In this article, we’ll setup and configure OAuth2 Proxy to enable Google SSO for Kibana in Kubernetes.
 Prerequisite: Kibana in Kubernetes Nginx Ingress Setup Google Credentials In Google Cloud Console, select OAuth consent screen Select the User Type as : “Internal” Complete the app registration form with your Authorized domain, then click Save.</description>
     </item>
-    
   </channel>
 </rss>
