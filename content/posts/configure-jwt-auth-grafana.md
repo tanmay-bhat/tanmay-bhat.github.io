@@ -54,7 +54,7 @@ import jwt
 import time
 import webbrowser
 
-private_key = open('./grafana.key.pub', 'r').read()
+private_key = open('./grafana.key', 'r').read()
 
 payload = {
     "user": "foobar",
