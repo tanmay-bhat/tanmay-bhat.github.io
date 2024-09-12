@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Kibana on Tanmay Bhat</title>
     <link>https://tanmay-bhat.github.io/tags/kibana/</link>
@@ -9,7 +9,7 @@
       <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
     <lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/kibana/index.xml" rel="self" type="application/rss+xml" />
@@ -18,9 +18,104 @@
       <link>https://tanmay-bhat.github.io/posts/google-sso-kibana/</link>
       <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/google-sso-kibana/</guid>
-      <description>OAuth2 Proxy is a reverse proxy that provides authentication using Providers such as Google, GitHub, and others to validate accounts by email, domain or group.
-In this article, we’ll setup and configure OAuth2 Proxy to enable Google SSO for Kibana in Kubernetes.
-Prerequisite: Kibana in Kubernetes Nginx Ingress Setup Google Credentials In Google Cloud Console, select OAuth consent screen Select the User Type as : “Internal” Complete the app registration form with your Authorized domain, then click Save.</description>
+      <description>&lt;p&gt;&lt;strong&gt;OAuth2 Proxy&lt;/strong&gt; is a reverse proxy that provides authentication using Providers such as Google, GitHub, and others to validate accounts by email, domain or group.&lt;/p&gt;
+&lt;p&gt;In this article, we’ll setup and configure OAuth2 Proxy to enable Google SSO for Kibana in Kubernetes.&lt;/p&gt;
+&lt;h3 id=&#34;prerequisite&#34;&gt;Prerequisite:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Kibana in Kubernetes&lt;/li&gt;
+&lt;li&gt;Nginx Ingress&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;setup-google-credentials&#34;&gt;Setup Google Credentials&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;In Google Cloud Console, select &lt;a href=&#34;https://console.cloud.google.com/apis/credentials/consent&#34;&gt;OAuth consent screen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Select the User Type as : “&lt;strong&gt;Internal”&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Complete the app registration form with your &lt;strong&gt;&lt;strong&gt;Authorized domain&lt;/strong&gt;&lt;/strong&gt;, then click &lt;strong&gt;Save.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;In the left Nav pane, choose &lt;a href=&#34;https://console.cloud.google.com/apis/credentials&#34;&gt;Credentials&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;In the center pane, choose &lt;strong&gt;&amp;ldquo;Credentials&amp;rdquo;&lt;/strong&gt; tab.
+&lt;ul&gt;
+&lt;li&gt;Open the &lt;strong&gt;&amp;ldquo;New credentials&amp;rdquo;&lt;/strong&gt; drop down&lt;/li&gt;
+&lt;li&gt;Choose &lt;strong&gt;&amp;ldquo;OAuth client ID&amp;rdquo;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Choose &lt;strong&gt;&amp;ldquo;Web application&amp;rdquo;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Application name can be anything, for simplicity, let’s say Kibana.&lt;/li&gt;
+&lt;li&gt;Authorized JavaScript origins is your Kibana endpoint ex: &lt;code&gt;https://kibana.example.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Authorized redirect URIs is the location of &lt;strong&gt;oauth2/callback&lt;/strong&gt; ex: &lt;code&gt;https://kibana.example.com.com/oauth2/callback&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Choose &lt;strong&gt;&amp;ldquo;Create&amp;rdquo;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Download the Credentials JSON file.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;setup-oauth2-proxy&#34;&gt;Setup Oauth2 Proxy&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Generate a random cookie secret with the below command and copy it to clipboard :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -ti --rm python:3-alpine python -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;import secrets,base64; print(base64.b64encode(base64.b64encode(secrets.token_bytes(16))));&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Add the Helm repository :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;helm repo add oauth2-proxy https://oauth2-proxy.github.io/manifests
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Install the helm chart with specified parameters as below :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;helm upgrade --install oauth2-proxy oauth2-proxy/oauth2-proxy &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--set config.clientID&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;GOOGLE_CLIENT_ID_HERE&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--set config.clientSecret&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;GOOGLE_CLIENT_SECRET_HERE&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--set config.cookieSecret&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;GENERATED_COOKIE_SECRET_HERE&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;--set extraArgs.provider&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;google&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Use the Google Client_ID and SECRET from the downloaded JSON file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Create and apply the Ingress for Oauth2 Proxy using the below YAML manifest :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;cat &amp;lt;&amp;lt;EOF | kubectl create -f -&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;networking.k8s.io/v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Ingress&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;oauth2-proxy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;ingressClassName&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;rules&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;host&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;https://kibana.example.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;http&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;paths&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;path&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/oauth2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;pathType&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Prefix&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;backend&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;service&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;oauth2-proxy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;port&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;number&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;4180&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;EOF&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;setup-ingress-annotation-for-kibana&#34;&gt;Setup Ingress annotation for Kibana&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;This article assumes you already have a Kibana setup running in Kubernetes with an Ingress.&lt;/li&gt;
+&lt;li&gt;Append the two nginx annotations mentioned below to existing Kibana Ingress. Once updated, the Ingress should look similar to :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;apiVersion&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;networking.k8s.io/v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;kind&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Ingress&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;metadata&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;kibana&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;annotations&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;nginx.ingress.kubernetes.io/auth-signin&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;https://$host/oauth2/start?rd=$escaped_request_uri&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;nginx.ingress.kubernetes.io/auth-url&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;https://$host/oauth2/auth&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;spec&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;ingressClassName&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nginx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;rules&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  - &lt;span style=&#34;color:#f92672&#34;&gt;host&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;kibana.example.com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;http&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;paths&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;backend&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;service&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;kibana&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;port&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &lt;span style=&#34;color:#f92672&#34;&gt;number&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;5601&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;path&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;pathType&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ImplementationSpecific&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Now if you hit the endpoint &lt;a href=&#34;http://kibana.example.com&#34;&gt;kibana.example.com&lt;/a&gt;. It should ask you to login via Google.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tanmay-bhat.github.io/kibana-google.png&#34; alt=&#34;kibana-sso&#34;  /&gt;
+&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

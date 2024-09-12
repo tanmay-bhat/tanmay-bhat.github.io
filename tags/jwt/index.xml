@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>JWT on Tanmay Bhat</title>
     <link>https://tanmay-bhat.github.io/tags/jwt/</link>
@@ -9,7 +9,7 @@
       <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
     <lastBuildDate>Fri, 29 Dec 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/jwt/index.xml" rel="self" type="application/rss+xml" />
@@ -18,9 +18,13 @@
       <link>https://tanmay-bhat.github.io/posts/configure-jwt-auth-grafana/</link>
       <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/configure-jwt-auth-grafana/</guid>
-      <description>JSON Web Tokens (JWTs) offer seamless sign-in, allowing users to carry their authentication securely across different applications within the same ecosystem. In this article, let&amp;rsquo;s go through the process of configuring JWT-based authentication with Grafana for a smoother user experience.
-Create a RSA key pair Begin by creating an RSA key pair. The private key will sign the JWT token, while the public key will verify it.
-ssh-keygen -t rsa -b 4096 -m PEM -f grafana.</description>
+      <description>&lt;p&gt;JSON Web Tokens (JWTs) offer seamless sign-in, allowing users to carry their authentication securely across different applications within the same ecosystem. In this article, let&amp;rsquo;s go through the process of configuring JWT-based authentication with Grafana for a smoother user experience.&lt;/p&gt;
+&lt;h3 id=&#34;create-a-rsa-key-pair&#34;&gt;Create a RSA key pair&lt;/h3&gt;
+&lt;p&gt;Begin by creating an RSA key pair. The private key will sign the JWT token, while the public key will verify it.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh-keygen -t rsa -b &lt;span style=&#34;color:#ae81ff&#34;&gt;4096&lt;/span&gt; -m PEM -f grafana.key -N &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;openssl rsa -in grafana.key -pubout -outform PEM -out grafana.key.pub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;configure-jwt-authentication&#34;&gt;Configure JWT authentication&lt;/h3&gt;
+&lt;p&gt;With the key pair in place, configure JWT authentication in Grafana. You can use environment variables or a configuration file. Here&amp;rsquo;s an example using environment variables:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

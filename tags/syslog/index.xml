@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>syslog on Tanmay Bhat</title>
+    <title>Syslog on Tanmay Bhat</title>
     <link>https://tanmay-bhat.github.io/tags/syslog/</link>
-    <description>Recent content in syslog on Tanmay Bhat</description>
+    <description>Recent content in Syslog on Tanmay Bhat</description>
     <image>
       <title>Tanmay Bhat</title>
       <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
     <lastBuildDate>Fri, 17 Feb 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/syslog/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,10 @@
       <link>https://tanmay-bhat.github.io/posts/syslog-parsing-with-fluentd/</link>
       <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/syslog-parsing-with-fluentd/</guid>
-      <description>Introduction Syslog logging is a widely used method for collecting and storing log data. It is a standard that is supported by many applications and platforms. In this blog post, we will take a look at the basics of syslog parsing with Fluentd.
-What Is Syslog? Syslog is a protocol used for collecting log data from various sources. It is usually used to collect log data from network devices such as routers and switches, as well as from OS and applications.</description>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Syslog logging is a widely used method for collecting and storing log data. It is a standard that is supported by many applications and platforms. In this blog post, we will take a look at the basics of syslog parsing with Fluentd.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-syslog&#34;&gt;What Is Syslog?&lt;/h2&gt;
+&lt;p&gt;Syslog is a protocol used for collecting log data from various sources. It is usually used to collect log data from network devices such as routers and switches, as well as from OS and applications. The log data is then stored on a central syslog server.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

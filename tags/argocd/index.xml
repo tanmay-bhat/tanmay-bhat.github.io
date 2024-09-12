@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ArgoCD on Tanmay Bhat</title>
     <link>https://tanmay-bhat.github.io/tags/argocd/</link>
@@ -9,17 +9,62 @@
       <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 27 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/argocd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multitenant ArgoCD Applications With Plugin Generator</title>
+      <link>https://tanmay-bhat.github.io/posts/argocd-plugin-generator-multitenant-deployment/</link>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/argocd-plugin-generator-multitenant-deployment/</guid>
+      <description>&lt;p&gt;In this article, you&amp;rsquo;ll learn how to leverage ArgoCD ApplicationSets with custom generators to streamline multi-tenant deployments. By the end, you&amp;rsquo;ll understand how to create a custom generator plugin, set up an ApplicationSet, and use features like selective deployments and Go templating.&lt;/p&gt;
+&lt;h3 id=&#34;prerequisite-&#34;&gt;Prerequisite :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ArgoCD installed in a Kubernetes cluster.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;writing-custom-generator-plugin&#34;&gt;Writing custom generator plugin&lt;/h3&gt;
+&lt;p&gt;Generators are responsible for generating &lt;em&gt;parameters&lt;/em&gt;, which are then rendered into the &lt;code&gt;template:&lt;/code&gt; fields of the ApplicationSet resource. See the &lt;a href=&#34;https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/&#34;&gt;Introduction&lt;/a&gt; for an example of how generators work with templates, to create Argo CD Applications.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>ArgoCD Image Updater with Digital Ocean Container Registry</title>
       <link>https://tanmay-bhat.github.io/posts/getting-started-with-argocd-image-updater/</link>
       <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/getting-started-with-argocd-image-updater/</guid>
-      <description>What&amp;rsquo;s on Image Updater A tool to automatically update the container images of Kubernetes workloads that are managed by Argo CD.
-Capabilities : Argo CD Image Updater can check for new versions of the container images that are deployed with your Kubernetes workloads and automatically update them to their latest allowed version using Argo CD. It works by setting appropriate application parameters for Argo CD applications, i.e. similar to argocd app set --helm-set image.</description>
+      <description>&lt;h2 id=&#34;whats-on-image-updater&#34;&gt;What&amp;rsquo;s on Image Updater&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A tool to automatically update the container images of Kubernetes workloads
+that are managed by &lt;a href=&#34;https://github.com/argoproj/argo-cd&#34;&gt;Argo CD&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;capabilities-&#34;&gt;Capabilities :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Argo CD Image Updater can check for new versions of the container images
+that are deployed with your Kubernetes workloads and automatically update them
+to their latest allowed version using Argo CD.&lt;/li&gt;
+&lt;li&gt;It works by setting appropriate
+application parameters for Argo CD applications, i.e. similar to
+&lt;code&gt;argocd app set --helm-set image.tag=v1.0.1&lt;/code&gt; - but in a fully automated
+manner.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;prerequisite-&#34;&gt;Prerequisite :&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Kubernetes Cluster&lt;/li&gt;
+&lt;li&gt;ArgoCD setup&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;
+&lt;h3 id=&#34;installation-of-argocd-image-updater&#34;&gt;Installation of ArgoCD Image Updater&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;To install argocd image updater in your cluster ( same one as argocd), run the below command:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/stable/manifests/install.yaml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Once it&amp;rsquo;s installed, let’s check the logs of the pod:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl logs -n argocd -l app.kubernetes.io/name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;argocd-image-updater
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;time&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2022-01-16T06:21:00Z&amp;#34;&lt;/span&gt; level&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;info msg&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Starting image update cycle, considering 0 annotated application(s) for update&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;time&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2022-01-16T06:21:00Z&amp;#34;&lt;/span&gt; level&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;info msg&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Processing results: applications=0 images_considered=0 images_skipped=0 images_updated=0 errors=0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Looks clean, let&amp;rsquo;s move forward.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

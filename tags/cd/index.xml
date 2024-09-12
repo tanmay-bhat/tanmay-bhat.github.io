@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CD on Tanmay Bhat</title>
+    <link>https://tanmay-bhat.github.io/tags/cd/</link>
+    <description>Recent content in CD on Tanmay Bhat</description>
+    <image>
+      <title>Tanmay Bhat</title>
+      <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.134.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tanmay-bhat.github.io/tags/cd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multitenant ArgoCD Applications With Plugin Generator</title>
+      <link>https://tanmay-bhat.github.io/posts/argocd-plugin-generator-multitenant-deployment/</link>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/argocd-plugin-generator-multitenant-deployment/</guid>
+      <description>&lt;p&gt;In this article, you&amp;rsquo;ll learn how to leverage ArgoCD ApplicationSets with custom generators to streamline multi-tenant deployments. By the end, you&amp;rsquo;ll understand how to create a custom generator plugin, set up an ApplicationSet, and use features like selective deployments and Go templating.&lt;/p&gt;
+&lt;h3 id=&#34;prerequisite-&#34;&gt;Prerequisite :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ArgoCD installed in a Kubernetes cluster.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;writing-custom-generator-plugin&#34;&gt;Writing custom generator plugin&lt;/h3&gt;
+&lt;p&gt;Generators are responsible for generating &lt;em&gt;parameters&lt;/em&gt;, which are then rendered into the &lt;code&gt;template:&lt;/code&gt; fields of the ApplicationSet resource. See the &lt;a href=&#34;https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/&#34;&gt;Introduction&lt;/a&gt; for an example of how generators work with templates, to create Argo CD Applications.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

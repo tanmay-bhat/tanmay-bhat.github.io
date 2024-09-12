@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>ingress on Tanmay Bhat</title>
+    <title>Ingress on Tanmay Bhat</title>
     <link>https://tanmay-bhat.github.io/tags/ingress/</link>
-    <description>Recent content in ingress on Tanmay Bhat</description>
+    <description>Recent content in Ingress on Tanmay Bhat</description>
     <image>
       <title>Tanmay Bhat</title>
       <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
     <lastBuildDate>Mon, 30 Jan 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/ingress/index.xml" rel="self" type="application/rss+xml" />
@@ -18,9 +18,15 @@
       <link>https://tanmay-bhat.github.io/posts/slo-based-alert-on-ingress-nginx/</link>
       <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/slo-based-alert-on-ingress-nginx/</guid>
-      <description>In this blog post, we will be discussing how to set up monitoring and alerting for Nginx ingress in a Kubernetes environment.
-We will cover the installation and configuration of ingress-nginx, Prometheus and Grafana, and the setup of alerts for key Ingress metrics.
-Pre-requisites : A Kubernetes cluster Helm v3 Install Prometheus and Grafana In this step, we will install Prometheus to collect metrics, and Grafana to visualize and create alerts based on those metrics.</description>
+      <description>&lt;p&gt;In this blog post, we will be discussing how to set up monitoring and alerting for Nginx ingress in a Kubernetes environment.&lt;/p&gt;
+&lt;p&gt;We will cover the installation and configuration of ingress-nginx, Prometheus and Grafana, and the setup of alerts for key Ingress metrics.&lt;/p&gt;
+&lt;h3 id=&#34;pre-requisites-&#34;&gt;Pre-requisites :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A Kubernetes cluster&lt;/li&gt;
+&lt;li&gt;Helm v3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-prometheus-and-grafana&#34;&gt;Install Prometheus and Grafana&lt;/h2&gt;
+&lt;p&gt;In this step, we will install Prometheus to collect metrics, and Grafana to visualize and create alerts based on those metrics.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

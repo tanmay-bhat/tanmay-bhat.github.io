@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>aws on Tanmay Bhat</title>
+    <title>AWS on Tanmay Bhat</title>
     <link>https://tanmay-bhat.github.io/tags/aws/</link>
-    <description>Recent content in aws on Tanmay Bhat</description>
+    <description>Recent content in AWS on Tanmay Bhat</description>
     <image>
       <title>Tanmay Bhat</title>
       <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
     <lastBuildDate>Fri, 08 Dec 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
@@ -18,18 +18,23 @@
       <link>https://tanmay-bhat.github.io/posts/multiple-aws-profile-zsh/</link>
       <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/multiple-aws-profile-zsh/</guid>
-      <description>ZSH functions are a great way to automate tasks and make your life easier. I’ve been using ZSH for a while now, and I recently started using functions to automate tasks that I do on a daily basis.
-Every day, I routinely switch between various AWS profiles, depending on the account and the role that I’m working on. So I wanted to make it easier to switch between profiles.
-In this blog, we’ll see how we can use ZSH functions to switch between AWS profiles.</description>
+      <description>&lt;p&gt;ZSH functions are a great way to automate tasks and make your life easier. I’ve been using ZSH for a while now, and I recently started using functions to automate tasks that I do on a daily basis.&lt;/p&gt;
+&lt;p&gt;Every day, I routinely switch between various AWS profiles, depending on the account and the role that I’m working on. So I wanted to make it easier to switch between profiles.&lt;/p&gt;
+&lt;p&gt;In this blog, we’ll see how we can use ZSH functions to switch between AWS profiles. Along with customizing the prompt to show the current AWS profile that we’re using so that we are sure on the account before deleting a database.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Move a Terraform Resource Into a Module Using Moved Block</title>
       <link>https://tanmay-bhat.github.io/posts/how-to-move-a-terraform-resource-into-a-module-using-moved-block/</link>
       <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/how-to-move-a-terraform-resource-into-a-module-using-moved-block/</guid>
-      <description>Starting from v1.1, Terraform provides a powerful feature known as the moved block. This feature allows you to reorganize your Terraform configuration without causing Terraform to perceive the refactor as a deletion and creation of resources.
-In this article, we will walk through a few examples of Terraform refactoring using the moved block.
-Prerequisites Terraform (&amp;gt;=1.1) Move a Resource Into Module First, we will create a sample S3 bucket to reference as a standalone resource.</description>
+      <description>&lt;p&gt;Starting from v1.1, Terraform provides a powerful feature known as the &lt;code&gt;moved&lt;/code&gt; block. This feature allows you to reorganize your Terraform configuration without causing Terraform to perceive the refactor as a deletion and creation of resources.&lt;/p&gt;
+&lt;p&gt;In this article, we will walk through a few examples of Terraform refactoring using the &lt;code&gt;moved&lt;/code&gt; block.&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Terraform (&amp;gt;=1.1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;move-a-resource-into-module&#34;&gt;Move a Resource Into Module&lt;/h2&gt;
+&lt;p&gt;First, we will create a sample S3 bucket to reference as a standalone resource. In your Terraform configuration directory, create a new &lt;code&gt;./lab-demo/s3.tf&lt;/code&gt; file.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

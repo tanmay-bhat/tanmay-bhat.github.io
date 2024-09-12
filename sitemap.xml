@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tanmay-bhat.github.io/tags/argocd/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/cd/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/posts/argocd-plugin-generator-multitenant-deployment/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/posts/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/</loc>
+    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tanmay-bhat.github.io/posts/configure-jwt-auth-grafana/</loc>
     <lastmod>2023-12-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -11,19 +29,10 @@
     <loc>https://tanmay-bhat.github.io/tags/jwt/</loc>
     <lastmod>2023-12-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tanmay-bhat.github.io/posts/</loc>
-    <lastmod>2023-12-29T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://tanmay-bhat.github.io/tags/prometheus/</loc>
     <lastmod>2023-12-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/restrict-label-values-prometheus/</loc>
-    <lastmod>2023-12-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/tags/</loc>
-    <lastmod>2023-12-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/</loc>
     <lastmod>2023-12-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/tags/aws/</loc>
@@ -71,7 +80,7 @@
     <loc>https://tanmay-bhat.github.io/tags/helm/</loc>
     <lastmod>2022-12-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana-ohmgraphite/</loc>
+    <loc>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana--ohmgraphite/</loc>
     <lastmod>2022-08-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/how-to-configure-grafana-to-use-remote-database-for-ha/</loc>
@@ -97,9 +106,6 @@
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/prometheus-self-metrics/</loc>
     <lastmod>2022-03-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/tags/argocd/</loc>
-    <lastmod>2022-02-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/getting-started-with-argocd-image-updater/</loc>
     <lastmod>2022-02-27T00:00:00+00:00</lastmod>

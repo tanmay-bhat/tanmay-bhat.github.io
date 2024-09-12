@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Helm on Tanmay Bhat</title>
     <link>https://tanmay-bhat.github.io/tags/helm/</link>
@@ -9,7 +9,7 @@
       <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
     <lastBuildDate>Tue, 27 Dec 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/helm/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,8 @@
       <link>https://tanmay-bhat.github.io/posts/helm-chart-testing-github-actions/</link>
       <pubDate>Tue, 27 Dec 2022 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/helm-chart-testing-github-actions/</guid>
-      <description>Helm is a popular open-source package manager for Kubernetes that simplifies the process of installing, upgrading, and managing applications on a Kubernetes cluster. Helm packages, called charts, contain all the necessary resources and configuration for deploying an application on a Kubernetes cluster.
-As with any software project, it&amp;rsquo;s important to test charts before deploying them to ensure that they are reliable and function as intended. Chart testing is the process of verifying the functionality and correctness of a Helm chart before it is deployed to a Kubernetes cluster.</description>
+      <description>&lt;p&gt;Helm is a popular open-source package manager for Kubernetes that simplifies the process of installing, upgrading, and managing applications on a Kubernetes cluster. Helm packages, called charts, contain all the necessary resources and configuration for deploying an application on a Kubernetes cluster.&lt;/p&gt;
+&lt;p&gt;As with any software project, it&amp;rsquo;s important to test charts before deploying them to ensure that they are reliable and function as intended. Chart testing is the process of verifying the functionality and correctness of a Helm chart before it is deployed to a Kubernetes cluster.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Prometheus on Tanmay Bhat</title>
     <link>https://tanmay-bhat.github.io/tags/prometheus/</link>
@@ -9,7 +9,7 @@
       <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
     <lastBuildDate>Fri, 29 Dec 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/prometheus/index.xml" rel="self" type="application/rss+xml" />
@@ -18,82 +18,155 @@
       <link>https://tanmay-bhat.github.io/posts/restrict-label-values-prometheus/</link>
       <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/restrict-label-values-prometheus/</guid>
-      <description>You might have come across the situation where you want to restrict certain cluster or environment specific data from being queried by users, for example finance data or other business critical data and not every Grafana user should be able to see this data. This is where label-proxy comes in handy.
-Label-proxy is a small proxy that sits between Grafana and Prometheus and restricts the label values that are being queried.</description>
+      <description>&lt;p&gt;You might have come across the situation where you want to restrict certain cluster or environment specific data from being queried by users, for example finance data or other business critical data and not every Grafana user should be able to see this data. This is where label-proxy comes in handy.&lt;/p&gt;
+&lt;p&gt;Label-proxy is a small proxy that sits between Grafana and Prometheus and restricts the label values that are being queried.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Configure Alerting on Ingress-NGINX in Kubernetes</title>
       <link>https://tanmay-bhat.github.io/posts/slo-based-alert-on-ingress-nginx/</link>
       <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/slo-based-alert-on-ingress-nginx/</guid>
-      <description>In this blog post, we will be discussing how to set up monitoring and alerting for Nginx ingress in a Kubernetes environment.
-We will cover the installation and configuration of ingress-nginx, Prometheus and Grafana, and the setup of alerts for key Ingress metrics.
-Pre-requisites : A Kubernetes cluster Helm v3 Install Prometheus and Grafana In this step, we will install Prometheus to collect metrics, and Grafana to visualize and create alerts based on those metrics.</description>
+      <description>&lt;p&gt;In this blog post, we will be discussing how to set up monitoring and alerting for Nginx ingress in a Kubernetes environment.&lt;/p&gt;
+&lt;p&gt;We will cover the installation and configuration of ingress-nginx, Prometheus and Grafana, and the setup of alerts for key Ingress metrics.&lt;/p&gt;
+&lt;h3 id=&#34;pre-requisites-&#34;&gt;Pre-requisites :&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A Kubernetes cluster&lt;/li&gt;
+&lt;li&gt;Helm v3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-prometheus-and-grafana&#34;&gt;Install Prometheus and Grafana&lt;/h2&gt;
+&lt;p&gt;In this step, we will install Prometheus to collect metrics, and Grafana to visualize and create alerts based on those metrics.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Monitor Gaming Laptop Using Grafana and OhmGraphite</title>
-      <link>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana-ohmgraphite/</link>
+      <link>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana--ohmgraphite/</link>
       <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana-ohmgraphite/</guid>
-      <description>I’ve recently got a gaming laptop and monitoring the CPU &amp;amp; GPU temperature of it has been a tedious task, like install MSI Afterburner, configure statistics server, configure overlay etc.
-That made me use Grafana’s product suite to configure monitoring of key components such as CPU, GPU, Network, Disk and alerting for my laptop such that I can game in peace and when my laptop’s temperature reaches a certain threshold limit, I’ll get a phone call.</description>
+      <guid>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana--ohmgraphite/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tanmay-bhat.github.io/grafana-laptop-image.png&#34; alt=&#34;Grafana laptop diagram&#34;  /&gt;
+
+I’ve recently got a gaming laptop and monitoring the CPU &amp;amp; GPU temperature of it has been a tedious task, like install MSI Afterburner, configure statistics server, configure overlay etc.&lt;/p&gt;
+&lt;p&gt;That made me use Grafana’s product suite to configure monitoring of key components such as CPU, GPU, Network, Disk and alerting for my laptop such that I can game in peace and when my laptop’s temperature reaches a certain threshold limit, I’ll get a phone call.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to prevent metrics explosion in Prometheus</title>
       <link>https://tanmay-bhat.github.io/posts/how-to-prevent-metrics-explosion-in-prometheus/</link>
       <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/how-to-prevent-metrics-explosion-in-prometheus/</guid>
-      <description>In this article, let’s go over some common metric sources and how to prevent the explosion of the metrics over time from them in Prometheus.
-1. Node exporter: Node exporter by default exposes ~ 977 different metrics per node. Depending on labels, this can easily by default create 1000 time series the moment node-exporter is started. Although 1000 metrics per node doesn’t look huge at the beginning, but if you’re sending these metrics to any cloud vendor like Grafana cloud, AWS Prometheus and Google Cloud for Prometheus, this can be unnecessary cost burn as all cloud vendors calculate cost based on number of time series sent &amp;amp; stored.</description>
+      <description>&lt;p&gt;In this article, let’s go over some common metric sources and how to prevent the explosion of the metrics over time from them in Prometheus.&lt;/p&gt;
+&lt;h2 id=&#34;1-node-exporter&#34;&gt;1. Node exporter:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Node exporter by default exposes ~ 977 different metrics per node. Depending on labels, this can easily by default create 1000 time series the moment node-exporter is started.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tanmay-bhat.github.io/node-exporter-total.png&#34; alt=&#34;node-exporter-total&#34;  /&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Although 1000 metrics per node doesn’t look huge at the beginning, but if you’re sending these metrics to any cloud vendor like &lt;a href=&#34;https://grafana.com/products/cloud/&#34;&gt;Grafana cloud&lt;/a&gt;, &lt;a href=&#34;https://aws.amazon.com/prometheus/&#34;&gt;AWS Prometheus&lt;/a&gt; and &lt;a href=&#34;https://cloud.google.com/stackdriver/docs/managed-prometheus&#34;&gt;Google Cloud for Prometheus&lt;/a&gt;, this can be unnecessary cost burn as all cloud vendors calculate cost based on number of time series sent &amp;amp; stored.&lt;/li&gt;
+&lt;li&gt;It’s not necessary that you should cut down on metric scraping if you’re sending metrics to any of the vendors mentioned above.&lt;/li&gt;
+&lt;li&gt;This also implies to local storage of Prometheus data, since too many time series over time can hinder Prometheus performance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;whats-a-collector-&#34;&gt;What’s a collector ?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Main components of a node are referred to as collector, for example CPU, file-system, memory etc.&lt;/li&gt;
+&lt;li&gt;Each collector exposes a set of metrics about the component it covers. &lt;a href=&#34;https://github.com/prometheus/node_exporter&#34;&gt;Here’s&lt;/a&gt; the list of collectors that are enabled by default.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Disable collectors&lt;/strong&gt; :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;A collector can be disabled by providing the flag : &lt;code&gt;--no-collector.&amp;lt;collector-name&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#the command will look like this : &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;node_exporter --no-collector.nfs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Disable self metrics of node-exporter :&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Node-exporter exposes &lt;em&gt;~ 80&lt;/em&gt; metrics about itself at &lt;code&gt;/metrics&lt;/code&gt; along with node metrics.&lt;/li&gt;
+&lt;li&gt;The metrics about node-exporter starts with prefix &lt;code&gt;promhttp_*, process_*, go_*&lt;/code&gt;. Below is the list of some of them :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;process_cpu_seconds_total
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;process_max_fds
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;process_open_fds
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;process_resident_memory_bytes
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;process_start_time_seconds
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;process_virtual_memory_bytes
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;process_virtual_memory_max_bytes
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;promhttp_metric_handler_errors_total
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;promhttp_metric_handler_requests_in_flight
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;promhttp_metric_handler_requests_total
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;amp; around &lt;span style=&#34;color:#ae81ff&#34;&gt;68&lt;/span&gt; go based metrics.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;You can disable all the above ~80 metrics by running node-exporter with flag &lt;code&gt;-web.disable-exporter-metrics&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#the command will look like this : &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;node_exporter --web.disable-exporter-metrics
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Enable only the collectors required&lt;/strong&gt; :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Opposite to disabling certain collectors, Node exporter has a flag &lt;code&gt;--collector.disable-defaults&lt;/code&gt; which disables all collectors at once.&lt;/li&gt;
+&lt;li&gt;Combining that flag with the collector of your choice will only collect the metrics of the collectors you enabled and discard everything else.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;For example&lt;/em&gt;, If you want to collect only the CPU and Memory metrics of a node, you can run the below command :&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to drop and delete metrics in Prometheus</title>
       <link>https://tanmay-bhat.github.io/posts/how-to-drop-and-delete-metrics-in-prometheus/</link>
       <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/how-to-drop-and-delete-metrics-in-prometheus/</guid>
-      <description>Keeping your Prometheus optimized can be a tedious task over time, but it&amp;rsquo;s essential in order to maintain the stability of it and also to keep the cardinality under control.
-Identifying the unnecessary metrics at source, deleting the existing unneeded metrics from your TSDB regularly will keep your Prometheus storage &amp;amp; performance intact.
-In this article we’ll look at both identifying, dropping them at source and deleting the already stored metrics from Prometheus.</description>
+      <description>&lt;p&gt;Keeping your Prometheus optimized can be a tedious task over time, but it&amp;rsquo;s essential in order to maintain the stability of it and also to keep the cardinality under control.&lt;/p&gt;
+&lt;p&gt;Identifying the unnecessary metrics at source, deleting the existing unneeded metrics from your TSDB regularly will keep your Prometheus storage &amp;amp; performance intact.&lt;/p&gt;
+&lt;p&gt;In this article we’ll look at both identifying, dropping them at source and deleting the already stored metrics from Prometheus.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to calculate the storage space required for Prometheus server</title>
       <link>https://tanmay-bhat.github.io/posts/how-to-calculate-the-storage-space-required-for-prometheus-server/</link>
       <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/how-to-calculate-the-storage-space-required-for-prometheus-server/</guid>
-      <description>In this article, let&amp;rsquo;s try to estimate the Prometheus storage required for an environment.
-Prometheus stores data in a time-series format and over time the targets which send metrics to the Prometheus server will get increased hence the number of metrics Prometheus ingests &amp;amp; stores will increase too leading to disk space issues.
-From the docs:
-Prometheus stores an average of only 1-2 bytes per sample. Thus, to plan the capacity of a Prometheus server, you can use the rough formula :</description>
+      <description>&lt;p&gt;In this article, let&amp;rsquo;s try to estimate the Prometheus storage required for an environment.&lt;/p&gt;
+&lt;p&gt;Prometheus stores data in a time-series format and over time the targets which send metrics to the Prometheus server will get increased hence the number of metrics Prometheus ingests &amp;amp; stores will increase too leading to disk space issues.&lt;/p&gt;
+&lt;p&gt;From the docs:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Prometheus stores an average of only 1-2 bytes per sample. Thus, to
+plan the capacity of a Prometheus server, you can use the rough formula :&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to configure Readiness Probe alert in Prometheus</title>
       <link>https://tanmay-bhat.github.io/posts/configure-readiness-probe-alert-prometheus/</link>
       <pubDate>Tue, 29 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/configure-readiness-probe-alert-prometheus/</guid>
-      <description>This article aims to explain the steps to configure Readiness Probe failure alert in Prometheus.
-Definition : Readiness Probe in Kubernetes is a probing mechanism to detect health (ready status) of a pod and if the health is intact, then allow the traffic to the pod.
-From the official doc,
-Sometimes, applications are temporarily unable to serve traffic. For example, an application might need to load large data or configuration files during startup, or depend on external services after startup.</description>
+      <description>&lt;p&gt;This article aims to explain the steps to configure Readiness Probe failure alert in Prometheus.&lt;/p&gt;
+&lt;h3 id=&#34;definition-&#34;&gt;Definition :&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Readiness Probe&lt;/strong&gt; in Kubernetes is a probing mechanism to detect health (ready status)  of a pod and if the health is intact, then allow the traffic to the pod.&lt;/p&gt;
+&lt;p&gt;From the official doc,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sometimes, applications are temporarily unable to serve traffic. For example, an application might need to load large data or configuration files during startup, or depend on external services after startup. In such cases, you don&amp;rsquo;t want to kill the application, but you don&amp;rsquo;t want to send it requests either. Kubernetes provides readiness probes to detect and mitigate these situations. A pod with containers reporting that they are not ready does not receive traffic through Kubernetes Services.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Self monitoring Prometheus with Grafana</title>
       <link>https://tanmay-bhat.github.io/posts/prometheus-self-metrics/</link>
       <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/prometheus-self-metrics/</guid>
-      <description>Who will monitor the monitoring system ? Itself&amp;hellip;&amp;hellip;&amp;hellip;sounds a bit magical.
-Since Prometheus monitors everything, it&amp;rsquo;s essential that we keep an eye on Prometheus so that over observability pillar stays strong.
-If Prometheus goes down, you won&amp;rsquo;t be having any metrics, hence no alert for any services, scary stuff along with a call from your boss !!
-Configuring Prometheus to monitor itself Prometheus exposes metrics about itself at /metrics endpoint, hence it can scrape and monitor its own health.</description>
+      <description>&lt;p&gt;Who will monitor the monitoring system ? &lt;em&gt;Itself&lt;/em&gt;&amp;hellip;&amp;hellip;&amp;hellip;sounds a bit magical.&lt;/p&gt;
+&lt;p&gt;Since Prometheus monitors everything, it&amp;rsquo;s essential that we keep an eye on Prometheus so that over observability pillar stays strong.&lt;/p&gt;
+&lt;p&gt;If Prometheus goes down, you won&amp;rsquo;t be having any metrics, hence no alert for any services, scary stuff along with a call from your boss !!&lt;/p&gt;
+&lt;h3 id=&#34;configuring-prometheus-to-monitor-itself&#34;&gt;&lt;strong&gt;&lt;strong&gt;Configuring Prometheus to monitor itself&lt;/strong&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Prometheus exposes metrics about itself  at &lt;code&gt;/metrics&lt;/code&gt; endpoint, hence it can scrape and monitor its own health.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to configure Prometheus server as a remote receiver</title>
       <link>https://tanmay-bhat.github.io/posts/how-to-configure-prometheus-server-as-a-remote-receiver/</link>
       <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/how-to-configure-prometheus-server-as-a-remote-receiver/</guid>
-      <description>Push vs Pull Prometheus is by far the best OSS you can get in 2022 for self-hosted / SaaS monitoring.
-There are other solutions that grew out of Prometheus for ex Thanos or Cortex.
-I believe the reason for this is the simplicity that Prometheus offers for querying the metrics and the way it handles millions of time series.
-Before we jump into the implementation, let’s learn a bit about Prometheus Pull based mechanism for monitoring.</description>
+      <description>&lt;h2 id=&#34;push-vs-pull&#34;&gt;Push vs Pull&lt;/h2&gt;
+&lt;p&gt;Prometheus is by far the best OSS you can get in 2022 for self-hosted / SaaS monitoring.&lt;/p&gt;
+&lt;p&gt;There are other solutions that grew out of Prometheus for ex &lt;a href=&#34;https://thanos.io/&#34;&gt;Thanos&lt;/a&gt; or &lt;a href=&#34;https://cortexmetrics.io/&#34;&gt;Cortex&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I believe the reason for this is the simplicity that Prometheus offers for querying the metrics and the way it handles millions of time series.&lt;/p&gt;
+&lt;p&gt;Before we jump into the implementation, let’s learn a bit about Prometheus Pull based mechanism for monitoring. Here’s how they explain:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
