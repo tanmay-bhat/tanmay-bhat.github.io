@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Leveraging ArgoCD ApplicationSets with Custom Generators: Streamlining Multi-Tenant Deployments
+title: Leveraging ArgoCD ApplicationSets with Plugin Generator to Streamline Multi-Tenant Deployments
 date: 2024-09-12
 tags: ["ArgoCD", "CD"]
 ---
