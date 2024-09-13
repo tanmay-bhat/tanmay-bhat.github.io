@@ -21,7 +21,7 @@ Conftest policies are written in Rego, a declarative language built on top of Go
 
 Here are a few example policies to demonstrate a couple of use cases :
 
-#### Enforcing label on each application : 
+#### Enforcing label on each application
 ```go
 package main
 
@@ -44,7 +44,7 @@ FAIL - kubeseal.yaml - main - Missing required label: 'environment'
 
 ```
 
-#### Enforce SSH for git repositories :
+#### Enforce SSH for git repositories
 
 ```go
 deny[msg] {
@@ -53,7 +53,7 @@ deny[msg] {
 }
 ```
 
-#### Restrict ArgoCD projects:
+#### Restrict ArgoCD projects
 
 ```go
 allowed_projects := {"prod", "staging", "dev"}
@@ -126,13 +126,15 @@ Kubeconform can be run on directory as well, allowing for batch validation.
 ---
 
 ### Notable points
-- Both conftest and kubeconform ar best suited to run inside CI to catch before its committed, just like any other test cases.
+- Both conftest and kubeconform are best suited to run inside CI to catch before its committed, just like any other test cases.
 - Although some of these use cases can be caught if the application manifests are generated as part of helm  template, they still provide easy to configure validations.
-- Conftest extends beyond kubernetes, can be applied to terraform, docker and other configurations as well.
+- Conftest extends beyond Kubernetes, can be applied to terraform, docker and other configurations as well.
 
 ---
 
-### References : 
+### References
 https://www.conftest.dev/
 
 https://www.openpolicyagent.org/
+
+https://github.com/yannh/kubeconform
