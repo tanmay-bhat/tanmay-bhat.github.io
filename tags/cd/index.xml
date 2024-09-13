@@ -14,7 +14,7 @@
     <lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/cd/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Leveraging ArgoCD ApplicationSets with Plugin Generator to Streamline Multi-Tenant Deployments</title>
+      <title>Leveraging ArgoCD ApplicationSet with Plugin Generator to Streamline Multi-Tenant Deployments</title>
       <link>https://tanmay-bhat.github.io/posts/argocd-plugin-generator-multitenant-deployment/</link>
       <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/argocd-plugin-generator-multitenant-deployment/</guid>
