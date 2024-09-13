@@ -11,8 +11,18 @@
     </image>
     <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Validating ArgoCD Application Manifest With Open Policy Agent</title>
+      <link>https://tanmay-bhat.github.io/posts/validate-argocd-with-opa/</link>
+      <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/validate-argocd-with-opa/</guid>
+      <description>&lt;p&gt;In the world of GitOps, even experienced DevOps engineers occasionally encounter issues stemming from simple typos or misconfigurations in these YAML files. To mitigate these risks and ensure compliance with organizational policies, we can bring in validation tools.&lt;/p&gt;
+&lt;p&gt;This post explores two powerful options: Conftest, which leverages Open Policy Agent (OPA), and Kubeconform. We&amp;rsquo;ll dive into how these tools can be implemented to streamline your validation processes.&lt;/p&gt;
+&lt;h3 id=&#34;argocd-custom-policy-validation-with-conftest-opa&#34;&gt;ArgoCD custom policy validation with Conftest (OPA)&lt;/h3&gt;
+&lt;p&gt;Open Policy Agent&amp;rsquo;s Conftest serves as an excellent tool for custom config rule validation, offering a more flexible alternative to script-based validation.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Leveraging ArgoCD ApplicationSet with Plugin Generator to Streamline Multi-Tenant Deployments</title>
       <link>https://tanmay-bhat.github.io/posts/argocd-plugin-generator-multitenant-deployment/</link>

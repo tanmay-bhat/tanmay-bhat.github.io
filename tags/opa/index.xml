@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>OPA on Tanmay Bhat</title>
+    <link>https://tanmay-bhat.github.io/tags/opa/</link>
+    <description>Recent content in OPA on Tanmay Bhat</description>
+    <image>
+      <title>Tanmay Bhat</title>
+      <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.134.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 13 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tanmay-bhat.github.io/tags/opa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Validating ArgoCD Application Manifest With Open Policy Agent</title>
+      <link>https://tanmay-bhat.github.io/posts/validate-argocd-with-opa/</link>
+      <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/validate-argocd-with-opa/</guid>
+      <description>&lt;p&gt;In the world of GitOps, even experienced DevOps engineers occasionally encounter issues stemming from simple typos or misconfigurations in these YAML files. To mitigate these risks and ensure compliance with organizational policies, we can bring in validation tools.&lt;/p&gt;
+&lt;p&gt;This post explores two powerful options: Conftest, which leverages Open Policy Agent (OPA), and Kubeconform. We&amp;rsquo;ll dive into how these tools can be implemented to streamline your validation processes.&lt;/p&gt;
+&lt;h3 id=&#34;argocd-custom-policy-validation-with-conftest-opa&#34;&gt;ArgoCD custom policy validation with Conftest (OPA)&lt;/h3&gt;
+&lt;p&gt;Open Policy Agent&amp;rsquo;s Conftest serves as an excellent tool for custom config rule validation, offering a more flexible alternative to script-based validation.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -3,21 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://tanmay-bhat.github.io/tags/argocd/</loc>
-    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
+    <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/opa/</loc>
+    <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/posts/</loc>
+    <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/tags/</loc>
+    <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/</loc>
+    <lastmod>2024-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tanmay-bhat.github.io/posts/validate-argocd-with-opa/</loc>
+    <lastmod>2024-09-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/tags/cd/</loc>
     <lastmod>2024-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/argocd-plugin-generator-multitenant-deployment/</loc>
-    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/posts/</loc>
-    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/tags/</loc>
-    <lastmod>2024-09-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tanmay-bhat.github.io/</loc>
     <lastmod>2024-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tanmay-bhat.github.io/posts/configure-jwt-auth-grafana/</loc>
