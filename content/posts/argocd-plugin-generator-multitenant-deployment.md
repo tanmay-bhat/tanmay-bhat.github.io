@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Leveraging ArgoCD ApplicationSets with Plugin Generator to Streamline Multi-Tenant Deployments
+title: Leveraging ArgoCD ApplicationSet with Plugin Generator to Streamline Multi-Tenant Deployments
 date: 2024-09-12
 tags: ["ArgoCD", "CD"]
 ---
@@ -183,13 +183,13 @@ As we can see from above, we have ArgoCD application for each tenant.
 
 ![ArgoCD Applications](/argocd-applications-ui.png)
 
-### De-provisioning
+### Deprovisioning
 
-As the application is created using ArgoCD, as soon as the plugin stops sending details for a deployed tenant, ArgoCD assumes that its not needed anymore and de-provisions it.
+As the application is created using ArgoCD, as soon as the plugin stops sending details for a deployed tenant, ArgoCD assumes that its not needed anymore and deprovisions it.
 
 It happens not on request failure, but change in output parameters from plugin. 
 
-### Selective deployments using output fIltering
+### Selective deployments using output filtering
 
 If we have a requirement to deploy only tenants in `status: active`  and not in `trial` state, we can use the below to filter : 
 
@@ -207,7 +207,7 @@ spec:
             - active
 ```
 
-It's a standard Kubernetes selector and it's a list, multiple values can be provided.
+It's a standard Kubernetes selector, and it's a list, multiple values can be provided.
 
 ### Passing Input parameters to Plugin
 - Instead of above filtering that will happen on client i.e ArgoCD side, if you implement the logic in plugin service to accept parameters, ArgoCD can send that while fetching tenants, for example : 
