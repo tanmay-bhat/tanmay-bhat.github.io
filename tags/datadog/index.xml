@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Datadog on Tanmay Bhat</title>
+    <link>https://tanmay-bhat.github.io/tags/datadog/</link>
+    <description>Recent content in Datadog on Tanmay Bhat</description>
+    <image>
+      <title>Tanmay Bhat</title>
+      <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.134.2</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 18 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tanmay-bhat.github.io/tags/datadog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning Go by Instrumenting a Go Application for Prometheus Metrics</title>
+      <link>https://tanmay-bhat.github.io/posts/learning-go-by-instrumenting-a-go-application-for-prometheus-metrics/</link>
+      <pubDate>Fri, 18 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/learning-go-by-instrumenting-a-go-application-for-prometheus-metrics/</guid>
+      <description>&lt;h3 id=&#34;a-beginners-perspective&#34;&gt;A Beginner&amp;rsquo;s Perspective&lt;/h3&gt;
+&lt;p&gt;Before we dive into the details, I recently started learning Go. This article is just a beginner&amp;rsquo;s perspective on combining Go learning and building a simple Prometheus metrics exporter.&lt;/p&gt;
+&lt;p&gt;I had a requirement to build this exporter because, at my workplace, we use &lt;a href=&#34;https://www.datadoghq.com/product/service-level-objectives/&#34;&gt;Datadog&amp;rsquo;s SLO&lt;/a&gt; product alongside RUM monitoring. However, since all our other analytics and metrics are in Prometheus, I built this to consolidate all SLOs in one place.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
