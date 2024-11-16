@@ -207,7 +207,7 @@ This function takes the SLO ID and the number of days to look back as parameters
 
 
 1. API Request
-    - `api.GetSLOHistor` is called with the provided SLO ID and time window.
+    `api.GetSLOHistory` is called with the provided SLO ID and time window.
     - Returns three values:
         - `resp` (SLOHistoryResponse struct): Contains the API response data.
         - `r` (_nethttp.Response): The actual HTTP response.
@@ -281,7 +281,7 @@ I set the model to `push` instead of Prometheus's default `pull` since we don't 
 ### Key Concepts in Prometheus Client Library
 - Collector : 
 A collector is a part of an exporter that represents a set of metrics. It may be a single metric if it is part of direct instrumentation, or many metrics if it is pulling metrics from another system.
-In our case, we used two collector types, Guage and Counter.
+In our case, we used two collector types, Gauge and Counter.
 - Registry : 
 A registry is a central place to store and manage multiple collectors. It keeps track of all registered metrics and their values.
 Prometheus client by default has a registry which collects go related metrics, for our simple use case, it's overkill, hence we create a new registry and register our metrics to that.
