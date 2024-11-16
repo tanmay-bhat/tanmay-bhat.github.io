@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Negative Lookahead in Prometheus Relabel Config (sort of)
+title: Negative Lookahead in Prometheus Relabel Config
 date: 2024-11-16
 tags: [prometheus, regex]
 ---
@@ -15,7 +15,7 @@ If negative lookahead was supported, you could have written something like this:
 - source_labels: [my_label]
   regex: 'my_value(?!_foobar)'
   target_label: my_label
-  replacement: 'my_value'
+  replacement: 'custom_value'
 ```
 
 So a matching metric would be:
@@ -47,7 +47,7 @@ Now, this is not as clean as negative lookahead, but this way works, and you can
 - source_labels: [my_label]
   regex: '(my_value)_(?:[^f]|f[^o]|fo[^o]|foo[^b]|foob[^a]|fooba[^r]).*'
   target_label: my_label
-  replacement: 'my_value'
+  replacement: 'custom_value'
 ```
 
 You can test this relabeling using https://relabeler.promlabs.com. Here's how it looks : 
