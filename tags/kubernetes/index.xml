@@ -137,8 +137,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Now if you hit the endpoint &lt;a href=&#34;http://kibana.example.com&#34;&gt;kibana.example.com&lt;/a&gt;. It should ask you to login via Google.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tanmay-bhat.github.io/kibana-google.png&#34; alt=&#34;kibana-sso&#34;  /&gt;
-&lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;kibana-sso&#34; loading=&#34;lazy&#34; src=&#34;https://tanmay-bhat.github.io/kibana-google.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to configure Readiness Probe alert in Prometheus</title>

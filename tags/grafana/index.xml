@@ -31,8 +31,7 @@
       <link>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana--ohmgraphite/</link>
       <pubDate>Mon, 29 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/monitor-gaming-laptop-using-grafana--ohmgraphite/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tanmay-bhat.github.io/grafana-laptop-image.png&#34; alt=&#34;Grafana laptop diagram&#34;  /&gt;
-
+      <description>&lt;p&gt;&lt;img alt=&#34;Grafana laptop diagram&#34; loading=&#34;lazy&#34; src=&#34;https://tanmay-bhat.github.io/grafana-laptop-image.png&#34;&gt;
 I’ve recently got a gaming laptop and monitoring the CPU &amp;amp; GPU temperature of it has been a tedious task, like install MSI Afterburner, configure statistics server, configure overlay etc.&lt;/p&gt;
 &lt;p&gt;That made me use Grafana’s product suite to configure monitoring of key components such as CPU, GPU, Network, Disk and alerting for my laptop such that I can game in peace and when my laptop’s temperature reaches a certain threshold limit, I’ll get a phone call.&lt;/p&gt;</description>
     </item>
@@ -41,8 +40,7 @@ I’ve recently got a gaming laptop and monitoring the CPU &amp;amp; GPU tempera
       <link>https://tanmay-bhat.github.io/posts/how-to-configure-grafana-to-use-remote-database-for-ha/</link>
       <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/posts/how-to-configure-grafana-to-use-remote-database-for-ha/</guid>
-      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://tanmay-bhat.github.io/grafana-ha.png&#34; alt=&#34;Grafana HA diagram&#34;  /&gt;
-&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img alt=&#34;Grafana HA diagram&#34; loading=&#34;lazy&#34; src=&#34;https://tanmay-bhat.github.io/grafana-ha.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In this article, we’ll see how to setup Grafana with a remote database so that we can scale Grafana to N instances.&lt;/p&gt;
 &lt;p&gt;The default SQLite database will not work with scaling beyond 1 instance since the SQLite3 DB is embedded inside Grafana container.&lt;/p&gt;
 &lt;h3 id=&#34;create-remote-postgresql-using-flyiohttpflyio-optional&#34;&gt;Create Remote &lt;strong&gt;PostgreSQL using &lt;a href=&#34;http://fly.io&#34;&gt;fly.io&lt;/a&gt; (Optional)&lt;/strong&gt;&lt;/h3&gt;
