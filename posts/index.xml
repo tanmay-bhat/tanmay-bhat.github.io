@@ -11,8 +11,17 @@
     </image>
     <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 18 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Negetive Lookahead in Prometheus Relabel Config (sort of)</title>
+      <link>https://tanmay-bhat.github.io/posts/prometheus-relabel-negetive-lookahead/</link>
+      <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/prometheus-relabel-negetive-lookahead/</guid>
+      <description>&lt;p&gt;Prometheus is written in Go and uses &lt;a href=&#34;https://github.com/google/re2/wiki/Syntax&#34;&gt;RE2&lt;/a&gt; and that does not support negative lookahead. From convenience perspective, its easier to write human-readable regex using that, but as its not supported, we&amp;rsquo;ll see a workaround for that.&lt;/p&gt;
+&lt;p&gt;Say for example, you have a label &lt;code&gt;my_label&lt;/code&gt; and you&amp;rsquo;d like to relabel all the label values to &lt;code&gt;custom_value&lt;/code&gt; where it contains &lt;code&gt;my_value&lt;/code&gt; but only when it does not contain &lt;code&gt;foobar&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If negative lookahead was supported, you could have written something like this:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Learning Go by Instrumenting a Go Application for Prometheus Metrics</title>
       <link>https://tanmay-bhat.github.io/posts/learning-go-by-instrumenting-a-go-application-for-prometheus-metrics/</link>
