@@ -11,8 +11,17 @@
     </image>
     <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 18 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Structs in Go for Mortals</title>
+      <link>https://tanmay-bhat.github.io/posts/structs-in-go-for-mortals/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/structs-in-go-for-mortals/</guid>
+      <description>&lt;p&gt;Structs in Go are used to group related data together under one type. They are similar to classes (sort of) in other languages. In this post, we will explore how to define and use structs in Go.&lt;/p&gt;
+&lt;h3 id=&#34;defining-a-struct&#34;&gt;Defining a Struct&lt;/h3&gt;
+&lt;p&gt;To define a struct, you use the &lt;code&gt;type&lt;/code&gt; keyword followed by the name of the struct you&amp;rsquo;d like to create. You then list the fields of the struct. Here&amp;rsquo;s an example of a struct that represents a person:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Learning Go by Instrumenting a Go Application for Prometheus Metrics</title>
       <link>https://tanmay-bhat.github.io/posts/learning-go-by-instrumenting-a-go-application-for-prometheus-metrics/</link>
@@ -21,15 +30,6 @@
       <description>&lt;h3 id=&#34;a-beginners-perspective&#34;&gt;A Beginner&amp;rsquo;s Perspective&lt;/h3&gt;
 &lt;p&gt;Before we dive into the details, I recently started learning Go. This article is just a beginner&amp;rsquo;s perspective on combining Go learning and building a simple Prometheus metrics exporter.&lt;/p&gt;
 &lt;p&gt;I had a requirement to build this exporter because, at my workplace, we use &lt;a href=&#34;https://www.datadoghq.com/product/service-level-objectives/&#34;&gt;Datadog&amp;rsquo;s SLO&lt;/a&gt; product alongside RUM monitoring. However, since all our other analytics and metrics are in Prometheus, I built this to consolidate all SLOs in one place.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Structs in Go for Mortals</title>
-      <link>https://tanmay-bhat.github.io/posts/structs-in-go-for-mortals/</link>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://tanmay-bhat.github.io/posts/structs-in-go-for-mortals/</guid>
-      <description>&lt;p&gt;Structs in Go are used to group related data together under one type. They are similar to classes (sort of) in other languages. In this post, we will explore how to define and use structs in Go.&lt;/p&gt;
-&lt;h3 id=&#34;defining-a-struct&#34;&gt;Defining a Struct&lt;/h3&gt;
-&lt;p&gt;To define a struct, you use the &lt;code&gt;type&lt;/code&gt; keyword followed by the name of the struct you&amp;rsquo;d like to create. You then list the fields of the struct. Here&amp;rsquo;s an example of a struct that represents a person:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

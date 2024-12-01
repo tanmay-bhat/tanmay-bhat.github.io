@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go</title>
+      <link>https://tanmay-bhat.github.io/tags/go/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/tags/go/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Prometheus</title>
       <link>https://tanmay-bhat.github.io/tags/prometheus/</link>
@@ -32,13 +39,6 @@
       <link>https://tanmay-bhat.github.io/tags/datadog/</link>
       <pubDate>Fri, 18 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/tags/datadog/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Go</title>
-      <link>https://tanmay-bhat.github.io/tags/go/</link>
-      <pubDate>Fri, 18 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://tanmay-bhat.github.io/tags/go/</guid>
       <description></description>
     </item>
     <item>
