@@ -9,7 +9,7 @@ Structs in Go are used to group related data together under one type. They are s
 
 ### Defining a Struct
 
-To define a struct, you use the `type` keyword followed by the name of the struct you'd like to create. You then list the fields of the struct. Here's an example of a struct that represents a person:
+To define a struct, you use the `type` keyword followed by the name of the struct you'd like to create. You then list the fields of the struct. Here's an example of a struct that represents a car:
 
 ```go
 
@@ -89,7 +89,7 @@ type Person struct {
 }
 ```
 
-### Anonymous Structs
+### Anonymous Struct
 
 You can also define anonymous structs, which are structs without a name. These are useful when you need a struct for a short period of time and don't want to define a named type. Hence, they cannot be used outside the function where they are defined.
 
@@ -143,9 +143,9 @@ fmt.Println(p.Model) // Output: Tesla
 ```
 
 
-### Empty structs
+### Empty struct
 
-You can create empty structs, which are structs with no fields. These are mostly useful (so far, for me) to create a map with no values. If you only want to check a key exists, where keys are not meaningful, use empty structs. For example:
+You can create empty structs, which are structs with no fields. These are mostly useful (so far, for me) to create a map with no values. If you only want to check a key exists, where values are not meaningful, use empty structs. For example:
 
 ```go
 
@@ -162,9 +162,9 @@ if _, ok := myMap["key"]; ok {
 }
 ```
 
-### Parsing JSON data with Structs
+### Parsing JSON data with Struct
 
-In Go, if you have to work with JSON data, say you make a request to an API and get a JSON response, you can parse that JSON data into a struct. For example, if you `https://pokeapi.co/api/v2/location-area` returns the following JSON data:
+In Go, you can use structs to parse JSON data. For example, if `https://pokeapi.co/api/v2/location-area` returns the following JSON data :
 
 ```json
 {
@@ -221,7 +221,7 @@ for _, result := range location.Results {
 ```
 One thing to be aware of is `json.Unmarshal()` takes a byte slice and a pointer to the struct where the data will be unmarshalled.
 
-### Structs as Function Arguments
+### Struct as Function Argument
 You can pass structs to functions as arguments. For example:
 
 ```go
@@ -260,7 +260,7 @@ myCar := Car{
 myCar.printCar()  // Output: Tesla - 2022
 ```
 
-### Structs as method receivers : Pointer
+### Structs as Method Receivers : Pointer
 
 The previous example is a value receiver. That means, whenever `printCar()` is called, it gets a copy of the `Car` struct. If you want to modify original the struct, you can use a pointer receiver:
 
@@ -292,7 +292,7 @@ In pointer receiver, we use `*` before the type of the receiver. This means that
 Notice how we created an instance of the `Car` struct in the beginning and set the model to "Tesla". Then we called the `setModel()` method on the instance and passed "BMW" as an argument. The method then changed the model of the car to "BMW". Without the pointer receiver, the model would have remained "Tesla".
 
 
-### Difference between Value and Pointer Receivers
+### Difference Between Value and Pointer Receivers
 
 When you define a method on a struct, you can use either a value receiver or a pointer receiver. A value receiver receives a copy of the struct, while a pointer receiver receives a reference to the struct.
 
@@ -301,7 +301,7 @@ Pointer receivers are used when you want to modify the original struct.
 Here's a [link](https://go.dev/play/p/FxM6dh4Zc6-) to go playground with code which demonstrates the difference between value and pointer receivers.
 
 
-### Struct as function return type
+### Struct as Function Return Type
 
 You can also return a struct from a function : 
 
@@ -326,9 +326,9 @@ func main() {
 ```
 
 
-## Exported and Unexported Fields in Structs
+## Exported and Unexported Fields in Struct
 
-In Go, f the first letter of a filed, method or struct name is uppercase, it is exported; if lowercase, it is unexported.
+In Go, if the first letter of a field, method or struct name is uppercase, it is exported; if lowercase, it is unexported.
 
 ```go
 // internals/foobar/foobar.go
@@ -374,7 +374,7 @@ As we are trying to access the unexported fields and methods of the struct, we w
 This can be fixed by exporting the struct and its fields and methods by making the first letter of the struct, fields and methods uppercase.
 
 
-### Struct Comparison
+### Structs Comparison
 
 You can compare two structs using the `==` operator. Two structs are considered equal if all their fields are equal. Here's an example:
 
