@@ -55,6 +55,15 @@
 &lt;p&gt;Generators are responsible for generating &lt;em&gt;parameters&lt;/em&gt;, which are then rendered into the &lt;code&gt;template:&lt;/code&gt; fields of the ApplicationSet resource. See the &lt;a href=&#34;https://argo-cd.readthedocs.io/en/stable/operator-manual/applicationset/&#34;&gt;Introduction&lt;/a&gt; for an example of how generators work with templates, to create Argo CD Applications.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Structs in Go for Mortals</title>
+      <link>https://tanmay-bhat.github.io/posts/structs-in-go-for-mortals/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/structs-in-go-for-mortals/</guid>
+      <description>&lt;p&gt;Structs in Go are used to group related data together under one type. They are similar to classes (sort of) in other languages. In this post, we will explore how to define and use structs in Go.&lt;/p&gt;
+&lt;h3 id=&#34;defining-a-struct&#34;&gt;Defining a Struct&lt;/h3&gt;
+&lt;p&gt;To define a struct, you use the &lt;code&gt;type&lt;/code&gt; keyword followed by the name of the struct you&amp;rsquo;d like to create. You then list the fields of the struct. Here&amp;rsquo;s an example of a struct that represents a person:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Configure JWT Authentication with Grafana</title>
       <link>https://tanmay-bhat.github.io/posts/configure-jwt-auth-grafana/</link>
       <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
