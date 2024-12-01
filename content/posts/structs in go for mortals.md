@@ -395,4 +395,11 @@ func main() {
 
 I hope this post helps to explain the basics of structs in Go based on what I have learned so far. I'll try to keep updating it as I learn more.
 
+---
+
+### References
+- [Go by Example](https://gobyexample.com/structs)
+- [Go Documentation](https://go.dev/doc/)
+- [Effective Go](https://go.dev/doc/effective_go)
+- [Learning Go by Instrumenting a Go Application for Prometheus Metrics](https://tanmay-bhat.github.io/posts/learning-go-by-instrumenting-a-go-application-for-prometheus-metrics/)
 
