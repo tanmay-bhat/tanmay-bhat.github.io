@@ -11,20 +11,34 @@
     </image>
     <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Go</title>
-      <link>https://tanmay-bhat.github.io/tags/go/</link>
-      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://tanmay-bhat.github.io/tags/go/</guid>
+      <title>Kubernetes</title>
+      <link>https://tanmay-bhat.github.io/tags/kubernetes/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
       <title>Prometheus</title>
       <link>https://tanmay-bhat.github.io/tags/prometheus/</link>
-      <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/tags/prometheus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Victoria-Metrics</title>
+      <link>https://tanmay-bhat.github.io/tags/victoria-metrics/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/tags/victoria-metrics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://tanmay-bhat.github.io/tags/go/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/tags/go/</guid>
       <description></description>
     </item>
     <item>
@@ -123,13 +137,6 @@
       <link>https://tanmay-bhat.github.io/tags/ingress/</link>
       <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://tanmay-bhat.github.io/tags/ingress/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kubernetes</title>
-      <link>https://tanmay-bhat.github.io/tags/kubernetes/</link>
-      <pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://tanmay-bhat.github.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>

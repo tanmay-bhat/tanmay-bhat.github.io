@@ -11,8 +11,16 @@
     </image>
     <generator>Hugo -- 0.134.2</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reducing Inter-AZ traffic in VictoriaMetrics with Zonekeeper</title>
+      <link>https://tanmay-bhat.github.io/posts/zonekeeper/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/zonekeeper/</guid>
+      <description>&lt;p&gt;As Kubernetes observability is going mainstream, it is important to understand and make an effort to reduce the cost of running these monitoring systems. One of the major costs in large scale clusters is the inter-AZ traffic. Whether using HA or not, vmagent scrapes metrics from all pods in the cluster, which are spread across multiple availability zones. This results in significant inter-AZ traffic that can become expensive.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s imagine a scenario :&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How to Configure Alerting on Ingress-NGINX in Kubernetes</title>
       <link>https://tanmay-bhat.github.io/posts/slo-based-alert-on-ingress-nginx/</link>

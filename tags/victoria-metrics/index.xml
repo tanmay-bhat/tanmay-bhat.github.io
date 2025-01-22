@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Victoria-Metrics on Tanmay Bhat</title>
+    <link>https://tanmay-bhat.github.io/tags/victoria-metrics/</link>
+    <description>Recent content in Victoria-Metrics on Tanmay Bhat</description>
+    <image>
+      <title>Tanmay Bhat</title>
+      <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.134.2</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tanmay-bhat.github.io/tags/victoria-metrics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reducing Inter-AZ traffic in VictoriaMetrics with Zonekeeper</title>
+      <link>https://tanmay-bhat.github.io/posts/zonekeeper/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/zonekeeper/</guid>
+      <description>&lt;p&gt;As Kubernetes observability is going mainstream, it is important to understand and make an effort to reduce the cost of running these monitoring systems. One of the major costs in large scale clusters is the inter-AZ traffic. Whether using HA or not, vmagent scrapes metrics from all pods in the cluster, which are spread across multiple availability zones. This results in significant inter-AZ traffic that can become expensive.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s imagine a scenario :&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
