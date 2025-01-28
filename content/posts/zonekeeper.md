@@ -43,7 +43,7 @@ There are three stages of relabeling in Prometheus:
 
 - relabeling : This is done before the actual scrape is done. This is useful if you want to discard some targets before scraping.
 - metric relabeling: This is done after the scrape is done and before the metrics are stored in the TSDB. This is useful if you want to modify the metric names or even drop some metrics.
-- remote write relabeling: This is done before the metrics are sent to remote storage. This is useful if you want drop of modify metrics before sending to remote storage.
+- remote write relabeling: This is done before the metrics are sent to remote storage. This is useful if you want drop or modify metrics before sending to remote storage.
 
 We will focus on the first stage of relabeling. When a target is discovered by vmagent, all the labels of the target are available to the relabeling configuration and in our case we will be using `kubernetes_sd` and hence all labels of a pod are available for relabeling with prefix `__meta_kubernetes_pod_label_your_label_name`.
 
@@ -180,7 +180,7 @@ Once we start the controller, all the pods will have the availability zone label
 ...
 ```
 
-Let's create a vmagent  which is a tiny prometheus compatible agent that can scrape metrics from pods and send to victoria-metrics server in zone `us-west-2a`. We will configure the vmagent to scrape only the pods that are running in the same availability zone as the vmagent.
+Let's create a vmagent  which is a tiny prometheus compatible agent that can scrape metrics from pods and send to victoria-metrics server in the zone `us-west-2a`. We will configure the vmagent to scrape only the pods that are running in the same availability zone as the vmagent.
 
 We want to apply the relabel config globally so that any PodMonitor or ServiceMonitor that exists or created will work without any changes. 
 
@@ -208,7 +208,7 @@ We can also see from service discovery that the pods from different availability
 
 ![alt text](/vmagent-relabel-target-drop.png)
 
-### Watching Multple Namespaces
+### Watching Multiple Namespaces
 By default, zonekeeper watches all namespaces. If you want to watch only specific namespaces, you can update the `WATCH_NAMESPACE` environment variable in the deployment manifest file with the namespaces you want to watch, comma separated.
 
 ### Filtering Pods based on Labels
@@ -224,7 +224,7 @@ Zonekeeper exposes the below metrics on `/metrics` endpoint by default at port `
 
 - `zonekeeper_label_updates_total` : The total number of pod label updates that succeeded.
 
-- `zonekeeper_nodes_watched` : The total number nodes that are being watched by zonekeeper.
+- `zonekeeper_nodes_watched` : The total number of nodes that are being watched by zonekeeper.
 
 - `zonekeeper_k8s_reconciliations_total` : The total number of kubernetes reconciliations that have been performed by zonekeeper.
 
