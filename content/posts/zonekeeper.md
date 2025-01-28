@@ -87,12 +87,17 @@ func (r *PodReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.R
     // Get zone from node labels
     zone, exists := node.Labels[podZoneLabel]
     if !exists {
-        logger.Info(fmt.Sprintf("Zone label not found on node %s", pod.Spec.NodeName))
+		logger.Error(nil, "node missing required zone label",
+			"node", node.Name,
+			"required_label", podZoneLabel)
         return ctrl.Result{}, nil
     }
 
     // Check if update is needed because zone label might already be present
     if pod.Labels[podZoneLabel] == zone {
+		logger.V(2).Info("pod zone label already up to date",
+			"pod", req.NamespacedName,
+			"zone", zone)
         return ctrl.Result{}, nil
     }
 
@@ -105,22 +110,24 @@ func (r *PodReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.R
     // Create patch of original pod
     podCopy := pod.DeepCopy()
 
-    logger.Info(fmt.Sprintf("Updating pod %s/%s with zone label '%s'", pod.Namespace, pod.Name, zone))
+	logger.V(2).Info("updating pod zone label",
+		"pod", req.NamespacedName,
+		"zone", zone)
 
-    // Use Patch instead of Update to handle conflicts and avoid requeueing
+    // Patch the pod object with the new zone label
     if err := r.Patch(ctx, &pod, client.MergeFrom(podCopy)); err != nil {
         return ctrl.Result{}, fmt.Errorf("failed to patch pod: %w", err)
     }
 
 // SetupWithManager sets up the controller with the Manager and filter only pods that are scheduled
 func (r *PodReconciler) SetupWithManager(mgr ctrl.Manager) error {
-    return ctrl.NewControllerManagedBy(mgr).
-        For(&corev1.Pod{}).
-        WithEventFilter(predicate.NewPredicateFuncs(func(object client.Object) bool {
-            pod := object.(*corev1.Pod)
-            return pod.Spec.NodeName != ""
-        })).
-        Complete(r)
+	return ctrl.NewControllerManagedBy(mgr).
+		For(&corev1.Pod{}).
+		WithEventFilter(predicate.NewPredicateFuncs(func(object client.Object) bool {
+			pod := object.(*corev1.Pod)
+			return pod.Spec.NodeName != ""
+		})).
+		Complete(r)
 }
 ```
 
@@ -205,10 +212,21 @@ We can also see from service discovery that the pods from different availability
 By default, zonekeeper watches all namespaces. If you want to watch only specific namespaces, you can update the `WATCH_NAMESPACE` environment variable in the deployment manifest file with the namespaces you want to watch, comma separated.
 
 ### Filtering Pods based on Labels
-Zone keeper by default watches all pods.  If you want to watch only specific pods based on labels, you can run zonekeeper with `--pod-label-selector` flag. This flag accepts multiple labels and values separated by comma. For example : 
+Zonekeeper by default watches all pods. If you want to watch only specific pods based on labels, you can run zonekeeper with `--pod-label-selector` flag. This flag accepts multiple labels and values separated by comma. For example : 
 ```bash
 ./zonekeeper --pod-label-selector=app=nginx,env=prod
 ```
+
+### Metrics
+Zonekeeper exposes the below metrics on `/metrics` endpoint by default at port `8080` :
+
+- `zonekeeper_label_updates_failed_total` : The total number of pod label updates that failed.
+
+- `zonekeeper_label_updates_total` : The total number of pod label updates that succeeded.
+
+- `zonekeeper_nodes_watched` : The total number nodes that are being watched by zonekeeper.
+
+- `zonekeeper_k8s_reconciliations_total` : The total number of kubernetes reconciliations that have been performed by zonekeeper.
 
 ### Zonekeeper vs Running Prometheus Agent as Daemonset
 
