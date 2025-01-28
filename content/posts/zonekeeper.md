@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reducing Inter-AZ traffic in VictoriaMetrics with Zonekeeper
-date: 2025-01-22
+date: 2025-01-28
 tags: ["kubernetes", "victoria-metrics", "prometheus"]
 ---
 
@@ -201,14 +201,14 @@ We can also see from service discovery that the pods from different availability
 
 ![alt text](/vmagent-relabel-target-drop.png)
 
-### Scaling, Sharding and Stability
+### Watching Multple Namespaces
+By default, zonekeeper watches all namespaces. If you want to watch only specific namespaces, you can update the `WATCH_NAMESPACE` environment variable in the deployment manifest file with the namespaces you want to watch, comma separated.
 
-- I’ve tested this with a few hundred pods with my macbook pro and it works fine. That doesn't mean it will work in production with thousands of pods. Here we can utilize sharding of zonekeeper.
-- One way to shard is to run multiple zonekeeper instances and each instance watches only a specific namespace. This way we can reduce the number of pods that each zonekeeper instance watches.
-- Another way is to shard based on zone. If we have 3 zones, then we can run 3 zonekeeper instances and each instance watches only pods in one zone.
-- I have not enabled leader election in zonekeeper, it's easy to enable and run multiple instances of zonekeeper where only instance is working at a time and can take over if the current instance fails, this ensures we have HA.
-- We can also implement metrics into zonekeeper to monitor the number of pods its failed to patch.
-- I could have written this controller to watch and patch statefulsets, deployments etc but the reason I chose pods is because of GitOps specifically ArgoCD. ArgoCD tracks deployments and statefulsets and if we patch them, ArgoCD will revert the changes. But it doesn't track pods, so we can patch pods without any issues.
+### Filtering Pods based on Labels
+Zone keeper by default watches all pods.  If you want to watch only specific pods based on labels, you can run zonekeeper with `--pod-label-selector` flag. This flag accepts multiple labels and values separated by comma. For example : 
+```bash
+./zonekeeper --pod-label-selector=app=nginx,env=prod
+```
 
 ### Zonekeeper vs Running Prometheus Agent as Daemonset
 
