@@ -21,6 +21,7 @@ With the key pair in place, configure JWT authentication in Grafana. You can use
 ```bash
 GF_AUTH_JWT_ENABLED=true
 GF_AUTH_JWT_URL_LOGIN=true
+GF_AUTH_JWT_AUTO_SIGN_UP=true
 GF_AUTH_JWT_HEADER_NAME=X-AUTH-TOKEN
 GF_AUTH_JWT_KEY_FILE=/etc/grafana/public-key.pem
 GF_AUTH_JWT_EMAIL_CLAIM=sub
