@@ -2,10 +2,9 @@ name: github pages test build
 
 on:
   pull_request:
-    branches:
-      - main
+
 jobs:
-  deploy:
+  test-build:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout Repo
@@ -19,7 +18,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'v0.147.8'
+          hugo-version: 'latest'
 
       - name: Build
         run: hugo --minify
