@@ -1,12 +1,10 @@
-name: github pages
+name: github pages test build
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
 
 jobs:
-  deploy:
+  test-build:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout Repo
@@ -24,10 +22,3 @@ jobs:
 
       - name: Build
         run: hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
