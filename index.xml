@@ -9,10 +9,20 @@
       <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- 0.134.2</generator>
+    <generator>Hugo -- 0.147.8</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to modify span attributes in OpenTelemetry using Hooks and Span Processors</title>
+      <link>https://tanmay-bhat.github.io/posts/modify-span-attribute-opentelemetry/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/modify-span-attribute-opentelemetry/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;In OpenTelemetry, spans are the building blocks of distributed tracing. They represent a single operation within a trace and can have various attributes (labels) associated with them. Sometimes, you may need to modify these attributes such as adding extra attribute or even removing them. In this post, we will explore how to modify span attributes in OpenTelemetry.&lt;/p&gt;
+&lt;h1 id=&#34;motivation&#34;&gt;Motivation&lt;/h1&gt;
+&lt;p&gt;I was recently working on adding OpenTelemetry to a Python ETL application. The application was fetching objects from an S3 bucket, and I wanted to modify the span attributes to include the bucket name in the span. As the application was using the &lt;code&gt;boto3&lt;/code&gt; library, and OpenTelemetry has out of the box instrumentation for &lt;code&gt;botocore&lt;/code&gt; using &lt;code&gt;BotocoreInstrumentor&lt;/code&gt; which adds a few span attributes like &lt;code&gt;cloud.region, rpc.method, rpc.service&lt;/code&gt; but not the bucket name. So I had to modify the span attributes to include the bucket name.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Reducing Inter-AZ traffic in VictoriaMetrics with Zonekeeper</title>
       <link>https://tanmay-bhat.github.io/posts/zonekeeper/</link>
@@ -173,7 +183,7 @@ I’ve recently got a gaming laptop and monitoring the CPU &amp;amp; GPU tempera
       <description>&lt;p&gt;&lt;img alt=&#34;Grafana HA diagram&#34; loading=&#34;lazy&#34; src=&#34;https://tanmay-bhat.github.io/grafana-ha.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In this article, we’ll see how to setup Grafana with a remote database so that we can scale Grafana to N instances.&lt;/p&gt;
 &lt;p&gt;The default SQLite database will not work with scaling beyond 1 instance since the SQLite3 DB is embedded inside Grafana container.&lt;/p&gt;
-&lt;h3 id=&#34;create-remote-postgresql-using-flyiohttpflyio-optional&#34;&gt;Create Remote &lt;strong&gt;PostgreSQL using &lt;a href=&#34;http://fly.io&#34;&gt;fly.io&lt;/a&gt; (Optional)&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;create-remote-postgresql-using&#34;&gt;Create Remote &lt;strong&gt;PostgreSQL using &lt;a href=&#34;http://fly.io&#34;&gt;fly.io&lt;/a&gt; (Optional)&lt;/strong&gt;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;For this demonstration, I’ll be using &lt;a href=&#34;https://fly.io/docs/reference/postgres/&#34;&gt;fly.io&lt;/a&gt;’s PostgreSQL service.&lt;/li&gt;
 &lt;li&gt;Its free (no need to add credit card) and it has 1 GB of storage for DB and should be enough to try out with Grafana.&lt;/li&gt;
@@ -401,8 +411,7 @@ plan the capacity of a Prometheus server, you can use the rough formula :&lt;/p&
       <description>&lt;h2 id=&#34;whats-on-image-updater&#34;&gt;What&amp;rsquo;s on Image Updater&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A tool to automatically update the container images of Kubernetes workloads
-that are managed by &lt;a href=&#34;https://github.com/argoproj/argo-cd&#34;&gt;Argo CD&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+that are managed by &lt;a href=&#34;https://github.com/argoproj/argo-cd&#34;&gt;Argo CD&lt;/a&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h3 id=&#34;capabilities-&#34;&gt;Capabilities :&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Argo CD Image Updater can check for new versions of the container images
@@ -571,8 +580,7 @@ Hence we thought how can we use a **single loadbalancer ** across all the namesp
       <description>&lt;h2 id=&#34;definition&#34;&gt;Definition&lt;/h2&gt;
 &lt;p&gt;what&amp;rsquo;s kubewatch ?&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/bitnami-labs/kubewatch%22%3E&#34;&gt;kubewatch&lt;/a&gt; is a Kubernetes watcher that currently publishes notification to Slack. Deploy it in your k8s cluster, and you will get event notifications in a slack channel.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/bitnami-labs/kubewatch%22%3E&#34;&gt;kubewatch&lt;/a&gt; is a Kubernetes watcher that currently publishes notification to Slack. Deploy it in your k8s cluster, and you will get event notifications in a slack channel.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Lets see how we can deploy it to our cluster.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Pre-requisites :&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;

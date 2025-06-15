@@ -9,10 +9,24 @@
       <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
-    <generator>Hugo -- 0.134.2</generator>
+    <generator>Hugo -- 0.147.8</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanmay-bhat.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Opentelemetry</title>
+      <link>https://tanmay-bhat.github.io/tags/opentelemetry/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/tags/opentelemetry/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spans</title>
+      <link>https://tanmay-bhat.github.io/tags/spans/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/tags/spans/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Kubernetes</title>
       <link>https://tanmay-bhat.github.io/tags/kubernetes/</link>

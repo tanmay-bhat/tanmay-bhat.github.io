@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Opentelemetry on Tanmay Bhat</title>
+    <link>https://tanmay-bhat.github.io/tags/opentelemetry/</link>
+    <description>Recent content in Opentelemetry on Tanmay Bhat</description>
+    <image>
+      <title>Tanmay Bhat</title>
+      <url>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://tanmay-bhat.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.8</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tanmay-bhat.github.io/tags/opentelemetry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to modify span attributes in OpenTelemetry using Hooks and Span Processors</title>
+      <link>https://tanmay-bhat.github.io/posts/modify-span-attribute-opentelemetry/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://tanmay-bhat.github.io/posts/modify-span-attribute-opentelemetry/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;In OpenTelemetry, spans are the building blocks of distributed tracing. They represent a single operation within a trace and can have various attributes (labels) associated with them. Sometimes, you may need to modify these attributes such as adding extra attribute or even removing them. In this post, we will explore how to modify span attributes in OpenTelemetry.&lt;/p&gt;
+&lt;h1 id=&#34;motivation&#34;&gt;Motivation&lt;/h1&gt;
+&lt;p&gt;I was recently working on adding OpenTelemetry to a Python ETL application. The application was fetching objects from an S3 bucket, and I wanted to modify the span attributes to include the bucket name in the span. As the application was using the &lt;code&gt;boto3&lt;/code&gt; library, and OpenTelemetry has out of the box instrumentation for &lt;code&gt;botocore&lt;/code&gt; using &lt;code&gt;BotocoreInstrumentor&lt;/code&gt; which adds a few span attributes like &lt;code&gt;cloud.region, rpc.method, rpc.service&lt;/code&gt; but not the bucket name. So I had to modify the span attributes to include the bucket name.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
