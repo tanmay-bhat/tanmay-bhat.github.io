@@ -1,0 +1,25 @@
+name: github pages test build
+
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      
+      - name: Add Theme Submodule
+        run: |
+          git submodule--helper add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod --depth=1
+          git submodule update --init --recursive
+          
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'v0.147.8'
+
+      - name: Build
+        run: hugo --minify
