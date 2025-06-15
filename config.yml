@@ -1,6 +1,7 @@
 baseURL: "https://tanmay-bhat.github.io"
 title: Tanmay Bhat
-paginate: 5
+pagination:
+  pagerSize: 5
 theme: PaperMod
 
 enableInlineShortcodes: true
