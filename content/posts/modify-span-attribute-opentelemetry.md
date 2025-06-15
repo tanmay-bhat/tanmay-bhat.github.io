@@ -14,7 +14,7 @@ I was recently working on adding OpenTelemetry to a Python ETL application. The 
 
 ## How to add S3 bucket name to span attributes in OpenTelemetry
 
-Let's say we have he code below to list objects in an S3 bucket using `boto3`:
+Let's say we have the code below to list objects in an S3 bucket using `boto3`:
 
 ```python
 def list_s3_objects(bucket_name: str, max_keys: int = 100) -> List[Dict[str, Any]]:
@@ -28,7 +28,7 @@ def list_s3_objects(bucket_name: str, max_keys: int = 100) -> List[Dict[str, Any
     ... # rest of the code
 ```
 
-And lets say we have already instrumented the `boto3` library using OpenTelemetry's `BotocoreInstrumentor`:
+And let's say we have already instrumented the `boto3` library using OpenTelemetry's `BotocoreInstrumentor`:
 
 ```python
 from opentelemetry.instrumentation.botocore import BotocoreInstrumentor
@@ -80,7 +80,7 @@ This will produce a span for the `list_objects_v2` operation as shown below:
             ...
 ```
 
-As we didn't create this span manually, we can modify the span using two methods. I used span.name to identify the span,because all S3 spans start with "S3." like S3.ListObjectsV2, S3.GetObject, etc.
+As we didn't create this span manually, we can modify the span using two methods. I used span.name to identify the span, because all S3 spans start with "S3." like S3.ListObjectsV2, S3.GetObject, etc.
 
 ## Modifying span attributes using SpanProcessor
 
@@ -117,13 +117,15 @@ Another way to modify span attributes is by using hooks. There are two types of 
 ```python
 from opentelemetry.instrumentation.botocore import BotocoreInstrumentor
 
+
+def s3_request_instrument_hook(span, service_name, operation_name, api_params):
     if span and span.is_recording() and span.name.startswith("S3.") and api_params.get("Bucket"):
         span.set_attribute("bucket.name", api_params["Bucket"])
 
 BotocoreInstrumentor().instrument(request_hook=s3_request_instrument_hook)
 ```
 
-`is_recording()` checks if the span is active; attributes should only be set on active, recording spans
+`is_recording()` checks if the span is active, only active and required spans should be exported to reduce computation and network overhead.
 
 Once we've modified the span attributes, we can see that the span now includes the `bucket.name` attribute:
 
